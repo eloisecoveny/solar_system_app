@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app">
-    <solar-system :planets="planets"></solar-system>
-    <planet-detail :selectedPlanet="selectedPlanet"></planet-detail>
+    <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
+    <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
   </div>
 </template>
 
@@ -43,6 +43,10 @@ export default {
         this.selectedPlanetIndex = this.selectedPlanetIndex - 1
         this.selectedPlanet = this.planets[this.selectedPlanetIndex]
       }
+    })
+    eventBus.$on("go-home", () => {
+      this.selectedPlanet = null
+      this.selectedPlanetIndex =  null
     })
   },
   methods: {

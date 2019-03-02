@@ -3,7 +3,7 @@
     <h1>Planet Detail</h1>
       <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
       <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
-      <button v-on:click="" type="button" name="buttonHome">Home</button>
+      <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 </template>
 
@@ -20,8 +20,8 @@ export default {
     handleToggleLeft(id){
       eventBus.$emit("toggle-left", id)
     },
-    goHome(){
-
+    goHome(id){
+      eventBus.$emit("go-home", id)
     }
   }
 }
