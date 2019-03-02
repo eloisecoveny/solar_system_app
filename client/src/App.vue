@@ -33,12 +33,16 @@ export default {
       this.selectedPlanet = this.planets[index]
     })
     eventBus.$on("toggle-right", () => {
-      this.selectedPlanetIndex = this.selectedPlanetIndex + 1
-      this.selectedPlanet = this.planets[this.selectedPlanetIndex]
+      if (this.selectedPlanetIndex < 9){
+        this.selectedPlanetIndex = this.selectedPlanetIndex + 1
+        this.selectedPlanet = this.planets[this.selectedPlanetIndex]
+      }
     })
     eventBus.$on("toggle-left", () => {
-      this.selectedPlanetIndex = this.selectedPlanetIndex - 1
-      this.selectedPlanet = this.planets[this.selectedPlanetIndex]
+      if (this.selectedPlanetIndex > 0){
+        this.selectedPlanetIndex = this.selectedPlanetIndex - 1
+        this.selectedPlanet = this.planets[this.selectedPlanetIndex]
+      }
     })
   },
   methods: {
