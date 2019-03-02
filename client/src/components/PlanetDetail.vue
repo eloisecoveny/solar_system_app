@@ -2,7 +2,9 @@
   <div id="planet-detail">
     <h1>Planet Detail</h1>
     <h2>{{selectedPlanet.name}}</h2>
+    <img :alt="selectedPlanet.image" :src="selectedPlanet.image"/>
     <p>{{selectedPlanet.description}}</p>
+    <p>Number of Moons: {{selectedPlanet.funFacts.no_moons}}</p>
       <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
       <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
       <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
@@ -24,6 +26,9 @@ export default {
     },
     goHome(id){
       eventBus.$emit("go-home", id)
+    },
+    textFormat(text){
+      text.to_s.gsub(/\n/, "<br/>")
     }
   }
 }
@@ -31,3 +36,12 @@ export default {
 
 <style lang="css" scoped>
 </style>
+
+<!--
+class TextFormat
+
+  def self.format(text)
+    text.to_s.gsub(/\n/, '<br/>')
+  end
+
+end -->
