@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app">
-    <solar-system></solar-system>
+    <solar-system :planets="planets"></solar-system>
     <planet-detail></planet-detail>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
   data(){
     return{
       planets: [],
+      selectedPlanetIndex: null,
       selectedPlanet: null
     }
   },
@@ -26,9 +27,16 @@ export default {
     fetch('http://localhost:3000/api/planets/')
     .then(response => response.json())
     .then(planets => this.planets = planets)
+
+    eventBus.$on("planet-selected", (index) => {
+      this.selectedPlanetIndex = index
+      this.selectedPlanet = this.planets[index]
+    })
   },
   methods: {
+    getPlanet(){
 
+    }
   }
 }
 </script>
