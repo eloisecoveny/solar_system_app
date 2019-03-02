@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app">
     <solar-system :planets="planets"></solar-system>
-    <planet-detail></planet-detail>
+    <planet-detail :selectedPlanet="selectedPlanet"></planet-detail>
   </div>
 </template>
 
@@ -31,6 +31,14 @@ export default {
     eventBus.$on("planet-selected", (index) => {
       this.selectedPlanetIndex = index
       this.selectedPlanet = this.planets[index]
+    })
+    eventBus.$on("toggle-right", () => {
+      this.selectedPlanetIndex = this.selectedPlanetIndex + 1
+      this.selectedPlanet = this.planets[this.selectedPlanetIndex]
+    })
+    eventBus.$on("toggle-left", () => {
+      this.selectedPlanetIndex = this.selectedPlanetIndex - 1
+      this.selectedPlanet = this.planets[this.selectedPlanetIndex]
     })
   },
   methods: {

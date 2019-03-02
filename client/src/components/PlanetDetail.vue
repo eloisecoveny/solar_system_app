@@ -1,5 +1,9 @@
 <template lang="html">
-  <h1>Planet Detail</h1>
+  <div id="planet-detail">
+    <h1>Planet Detail</h1>
+      <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
+      <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
+  </div>
 </template>
 
 <script>
@@ -9,8 +13,11 @@ export default {
   name: "planet-detail",
   props: ['selectedPlanet'],
   methods: {
-    handleToggle(){
-
+    handleToggleRight(id){
+      eventBus.$emit("toggle-right", id)
+    },
+    handleToggleLeft(id){
+      eventBus.$emit("toggle-left", id)
     },
     goHome(){
 
