@@ -1,5 +1,8 @@
 <template lang="html">
-
+  <div id="app">
+    <solar-system></solar-system>
+    <planet-detail></planet-detail>
+  </div>
 </template>
 
 <script>
