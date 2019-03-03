@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="planetIndex" >
     <h1>Solar System</h1>
-      <div id="sun-rotate" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="sun-rotate" :planets="planets[0]" v-on:click="handleClick(index)" >
         <div id="sun">
         </div>
       </div>
