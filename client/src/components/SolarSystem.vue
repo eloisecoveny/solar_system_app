@@ -72,6 +72,14 @@ export default {
 
 h1 {
   color: white;
+  transition: transform .2s;
+  margin-top: 25px;
+  margin-left: 35px;
+  float: left;
+}
+
+h1:hover {
+  transform: scale(1.4);
 }
 
 #planetIndex {
@@ -111,7 +119,7 @@ h1 {
     border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 10s linear infinite;
-    animation: spin-right 14s linear infinite;
+    animation: spin-right 12s linear infinite;
     z-index: 8;
 }
 #mercury {
@@ -138,7 +146,7 @@ h1 {
     border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 18s linear infinite;
+    animation: spin-right 15s linear infinite;
     z-index: 7;
 }
 
@@ -195,7 +203,7 @@ h1 {
     border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 40s linear infinite;
+    animation: spin-right 45s linear infinite;
     z-index: 5;
 }
 
@@ -223,7 +231,7 @@ h1 {
     border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 66s linear infinite;
+    animation: spin-right 70s linear infinite;
     z-index: 4;
 }
 
@@ -244,14 +252,14 @@ h1 {
 
 #saturn-orbit {
     position: absolute;
-    top: -10px;
-    left: 400px;
-    width: 550px;
-    height: 550px;
+    top: -40px;
+    left: 370px;
+    width: 625px;
+    height: 625px;
     border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 69s linear infinite;
+    animation: spin-right 75s linear infinite;
     z-index: 3;
 }
 
@@ -275,7 +283,7 @@ h1 {
   border: 4px #876220 solid;
   border-radius: 100%;
   -webkit-animation: spin-right 5s linear infinite;
-  animation: spin-right 69s linear infinite;
+  animation: spin-right 75s linear infinite;
 }
 
 #saturn:hover {
