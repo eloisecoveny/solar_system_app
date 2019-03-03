@@ -2,9 +2,10 @@
   <div id="planet-detail">
     <h1>Planet Detail</h1>
     <h2>{{selectedPlanet.name}}</h2>
-    <img :alt="selectedPlanet.image" :src="selectedPlanet.image"/>
+    <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
     <p>{{selectedPlanet.description}}</p>
     <p>Number of Moons: {{selectedPlanet.funFacts.no_moons}}</p>
+    <p>Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
       <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
       <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
       <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
@@ -35,13 +36,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+body {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: flex-end;
+}
+img {
+  width: 50%
+}
 </style>
-
-<!--
-class TextFormat
-
-  def self.format(text)
-    text.to_s.gsub(/\n/, '<br/>')
-  end
-
-end -->
