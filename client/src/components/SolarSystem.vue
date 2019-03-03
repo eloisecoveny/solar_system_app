@@ -44,7 +44,8 @@
         <div id="pluto">
         </div>
       </div>
-
+      <div id="cosmos">
+      </div>
 
   </div>
 </template>
@@ -70,15 +71,17 @@ export default {
 
 <style lang="css" scoped>
 
+
+
 #planetIndex {
   align-items: center;
 }
+
 
 #sun-rotate {
   position: absolute;
   top: 210px;
   left: 665px;
-
 }
 
 #sun {
@@ -90,7 +93,11 @@ export default {
   border-radius: 100%;
   background: radial-gradient(circle at 30px 100px, #ffd000, #ff6702);
   transition: transform .2s;
-  z-index: 7;
+  z-index: 9;
+}
+
+#sun:hover {
+  transform: scale(1.2);
 }
 
 
@@ -104,7 +111,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 10s linear infinite;
     animation: spin-right 14s linear infinite;
-    z-index: 6;
+    z-index: 8;
 }
 #mercury {
   position: absolute;
@@ -118,7 +125,7 @@ export default {
 }
 
 #mercury:hover {
-  transform: scale(1.5);
+  transform: scale(1.8);
 }
 
 #venus-orbit {
@@ -131,7 +138,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 18s linear infinite;
-    z-index: 5;
+    z-index: 7;
 }
 
 #venus {
@@ -159,8 +166,9 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 24s linear infinite;
-    z-index: 4;
+    z-index: 6;
 }
+
 
 #earth {
     position: absolute;
@@ -187,7 +195,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 40s linear infinite;
-    z-index: 3;
+    z-index: 5;
 }
 
 #mars {
@@ -215,7 +223,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 66s linear infinite;
-    z-index: 2;
+    z-index: 4;
 }
 
 #jupiter {
@@ -243,7 +251,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 69s linear infinite;
-    z-index: 1;
+    z-index: 3;
 }
 
 #saturn {
@@ -284,7 +292,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 73s linear infinite;
-    z-index: 0;
+    z-index: 2;
 }
 
 #uranus {
@@ -312,7 +320,7 @@ export default {
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 80s linear infinite;
-    z-index: 0;
+    z-index: 1;
 }
 
 #neptune {
@@ -355,7 +363,15 @@ export default {
 }
 
 #pluto:hover {
-  transform: scale(1.5);
+  transform: scale(1.9);
+}
+
+#cosmos {
+  background-size: 100%;
+  background-image: url('../assets/Galaxy.jpg');
+  position: fixed;
+  height: auto;
+  width: auto;
 }
 
 @-webkit-keyframes spin-right {
