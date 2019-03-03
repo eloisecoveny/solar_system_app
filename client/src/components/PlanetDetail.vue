@@ -8,7 +8,9 @@
       <h4>Fun Facts</h4>
       <p>Number of Moons: {{selectedPlanet.funFacts.noMoons}}</p>
       <p>Gravity: {{selectedPlanet.funFacts.gravity}}</p>
-      <p>Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
+      <p v-if="selectedPlanet.funFacts.lengthOfYears">Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
+      <p v-if="selectedPlanet.funFacts.daysEarth">Length of Day: {{selectedPlanet.funFacts.daysEarth}}</p>
+      <p v-if="selectedPlanet.funFacts.planetType">Planet Type: {{selectedPlanet.funFacts.planetType}}</p>
     </div>
     <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
     <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
