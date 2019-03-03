@@ -140,7 +140,9 @@ button {
   margin-top: -400px;
   font-weight: bold;
   background-color: black;
+  cursor: pointer;
 }
+
 
 #arrow-right {
   border: none;
@@ -151,6 +153,7 @@ button {
   margin-left: 90%;
   font-weight: bold;
   background-color: black;
+  cursor: pointer;
 }
 
 #home{
@@ -160,6 +163,7 @@ button {
   margin: 300px 450px;
   width:80px;
   height:80px;
+  cursor: pointer;
 }
 
 
