@@ -1,8 +1,8 @@
 <template lang="html">
   <div id="planet-detail">
     <h1>Planet Detail</h1>
-    <h2>{{selectedPlanet.name}}</h2>
     <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
+    <h2>{{selectedPlanet.name}}</h2>
     <p>{{selectedPlanet.description}}</p>
     <div>
       <h4>Fun Facts</h4>
@@ -11,6 +11,7 @@
       <p v-if="selectedPlanet.funFacts.lengthOfYears">Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
       <p v-if="selectedPlanet.funFacts.daysEarth">Length of Day: {{selectedPlanet.funFacts.daysEarth}}</p>
       <p v-if="selectedPlanet.funFacts.planetType">Planet Type: {{selectedPlanet.funFacts.planetType}}</p>
+      <p v-if="selectedPlanet.funFacts.starType">Star Type: {{selectedPlanet.funFacts.starType}}</p>
       <p>Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
     <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>

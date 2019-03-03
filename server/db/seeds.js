@@ -5,7 +5,7 @@ db.planets.insertMany([
   {
     name: "Sun",
     image: 'https://i.ytimg.com/vi/orqeYbqSiLg/maxresdefault.jpg',
-    description: "The Sun—the heart of our solar system—is a yellow dwarf star, a hot ball of glowing gases. Its gravity holds the solar system together, keeping everything from the biggest planets to the smallest particles of debris in its orbit. Electric currents in the Sun generate a magnetic field that is carried out through the solar system by the solar wind—a stream of electrically charged gas blowing outward from the Sun in all directions.",
+    description: "The Sun—the heart of our solar system—is a hot ball of glowing gases. Its gravity holds the solar system together, keeping everything from the biggest planets to the smallest particles of debris in its orbit. Electric currents in the Sun generate a magnetic field that is carried out through the solar system by the solar wind—a stream of electrically charged gas blowing outward from the Sun in all directions.",
     funFacts: {
       noMoons: "0",
       gravity: "28 times stronger than the force of gravity on the surface of the Earth",
@@ -23,7 +23,7 @@ db.planets.insertMany([
       daysEarth: "59 Earth days",
       gravity: "87 times weaker than the force of gravity on the surface of the Earth",
       planetType: "Terrestrial",
-      temperature: "Temperatures are extreme, both hot and cold 800 degrees Fahrenheit /430 degrees Celsius, during the day. Because the planet has no atmosphere to retain that heat, nighttime temperatures on the surface can drop to  -290 degrees Fahrenheit /  -180 degrees Celsius."
+      temperature: "Temperatures are extreme, both hot and cold 800 degrees Fahrenheit /  430 degrees Celsius, during the day. Because the planet has no atmosphere to retain that heat, nighttime temperatures on the surface can drop to  -290 degrees Fahrenheit /  -180 degrees Celsius."
     }
   },
   {
