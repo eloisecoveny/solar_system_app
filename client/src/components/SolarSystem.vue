@@ -14,8 +14,12 @@
         </div>
       </div>
       <div id="earth-orbit" v-on:click="handleClick(3)" >
+        <div id="moon-orbit">
+          <div id="earth-moon">
+            </div>
+          </div>
         <div id="earth">
-        </div>
+          </div>
       </div>
       <div id="mars-orbit" v-on:click="handleClick(4)" >
         <div id="mars">
@@ -178,7 +182,6 @@ h1:hover {
     z-index: 6;
 }
 
-
 #earth {
     position: absolute;
     top: 150px;
@@ -188,6 +191,31 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #69b1f4, #00ad62);
     transition: transform .2s;
+}
+
+#earth-moon {
+  position: absolute;
+  top: 10px;
+  left: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: radial-gradient(circle at 50% 50%, #e8e3e3, #b5b5b5);
+  -webkit-animation: spin-right 5s linear infinite;
+  animation: spin-right 75s linear infinite;
+}
+
+#moon-orbit {
+    position: absolute;
+    top: 140px;
+    left: -15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+
+    -webkit-animation: spin-right 5s linear infinite;
+    animation: spin-right 6s linear infinite;
+    z-index: 6;
 }
 
 #earth:hover {
