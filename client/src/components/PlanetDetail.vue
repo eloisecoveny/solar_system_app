@@ -11,6 +11,7 @@
       <p v-if="selectedPlanet.funFacts.lengthOfYears">Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
       <p v-if="selectedPlanet.funFacts.daysEarth">Length of Day: {{selectedPlanet.funFacts.daysEarth}}</p>
       <p v-if="selectedPlanet.funFacts.planetType">Planet Type: {{selectedPlanet.funFacts.planetType}}</p>
+      <p>Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
     <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
     <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>

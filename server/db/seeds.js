@@ -9,8 +9,8 @@ db.planets.insertMany([
     funFacts: {
       noMoons: "0",
       gravity: "28 times stronger than the force of gravity on the surface of the Earth",
-      starType: "Yellow Dwarf"
-
+      starType: "Yellow Dwarf",
+      temperature: "10,000 degrees Fahrenheit/ 5538 degrees Celsius."
     }
   },
   {
@@ -22,7 +22,8 @@ db.planets.insertMany([
       lengthOfYears: "88 Earth days",
       daysEarth: "59 Earth days",
       gravity: "87 times weaker than the force of gravity on the surface of the Earth",
-      planetType: "Terrestrial"
+      planetType: "Terrestrial",
+      temperature: "Temperatures are extreme, both hot and cold 800 degrees Fahrenheit /430 degrees Celsius, during the day. Because the planet has no atmosphere to retain that heat, nighttime temperatures on the surface can drop to  -290 degrees Fahrenheit /  -180 degrees Celsius."
     }
   },
   {
@@ -34,7 +35,8 @@ db.planets.insertMany([
       lengthOfYears: "225 Earth days",
       daysEarth: "243 Earth days",
       gravity: "Almost the same force of gravity than the surface of the Earth",
-      planetType: "Terrestrial"
+      planetType: "Terrestrial",
+      temperature: "1880 degrees Fahrenheit / 470 degrees Celsius."
     }
   },
   {
@@ -46,7 +48,8 @@ db.planets.insertMany([
       lengthOfYears: "365 Earth days",
       daysEarth: "24 hours",
       gravity: "9.8 m/s²",
-      planetType: "Terrestrial"
+      planetType: "Terrestrial",
+      temperature: "Average temperatures rose 1.62 degrees Fahrenheit / 0.9 degrees Celsius."
     }
   },
   {
@@ -58,8 +61,8 @@ db.planets.insertMany([
       lengthOfYears: "687 Earth days",
       daysEarth: "25 Earth hours",
       gravity: "3 times weaker than the force of gravity on the surface of the Earth",
-      planetType: "Terrestrial"
-
+      planetType: "Terrestrial",
+      temperature: "Can be as high as 70 degrees Fahrenheit / 20 degrees Celsius, or as low as about -225 degrees Fahrenheit / -153 degrees Celsius."
     }
   },
   {
@@ -71,7 +74,8 @@ db.planets.insertMany([
       lengthOfYears: "4333 Earth days",
       daysEarth: "10 Earth hours",
       gravity: "3 times stronger than the force of gravity on the surface of the Earth",
-      planetType: "Gas Giant"
+      planetType: "Gas Giant",
+      temperature: "The temperature ranges from about -190 degrees Fahrenheit / -128 degrees Celsius, for the visible surface of the atmosphere, to 9°F / -13°C at lower cloud levels. Certain regions reach as high as 40°F / 4°C at still lower cloud levels near the equator. Jupiter gives off four times as much heat as it gets from the sun."
     }
   },
   {
@@ -83,7 +87,8 @@ db.planets.insertMany([
       lengthOfYears: "10759 Earth days",
       daysEarth: "11 Earth hours",
       gravity: "Almost the same force of gravity than the surface of the Earth",
-      planetType: "Gas Giant"
+      planetType: "Gas Giant",
+      temperature: "One Cool Planet. With an average temperature of minus 288 degrees Fahrenheit / -178 degrees Celsius."
     }
   },
   {
@@ -95,7 +100,8 @@ db.planets.insertMany([
       lengthOfYears: "30687 Earth days",
       daysEarth: "17 Earth hours",
       gravity: "Almost the same force of gravity than the surface of the Earth",
-      planetType: "Ice Giant"
+      planetType: "Ice Giant",
+      temperature: "With a minimum temperature of -371 degrees Fahrenheit / -224 degrees Celsius, makes it even colder than Neptune in some places."
     }
   },
   {
@@ -107,8 +113,8 @@ db.planets.insertMany([
       lengthOfYears: "60190 Earth days",
       daysEarth: "16 Earth hours",
       gravity: "Almost the same force of gravity than the surface of the Earth",
-      planetType: "Ice Giant"
-
+      planetType: "Ice Giant",
+      temperature: "The average temperature on Neptune is about -392 degrees Fahrenheit / -200 degrees Celsius."
     }
   },
   {
@@ -120,7 +126,8 @@ db.planets.insertMany([
       lengthOfYears: "90530 Earth days",
       daysEarth: "6 Earth days",
       gravity: "Its gravity is only one-fifteenth that of Earth's, so you'd only weigh 10 lbs. (4.5 kilograms) on Pluto if you weighed 150 lbs. (68 kg) on Earth.",
-      planetType: "Dwarf"
+      planetType: "Dwarf",
+      temperature: "Can range from a low temperature of -400 degrees Fahrenheit / -240 and -360 degrees Fahrenheit / -218 degrees Celsius."
     }
   }
 ])
