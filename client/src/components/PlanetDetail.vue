@@ -16,7 +16,7 @@
     <p id="audio">Audio</p>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft"> < </button>
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
-    <button id="home" v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
+    <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
   </div>
 </template>
 
@@ -52,6 +52,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#planet-detail {
+  background-color: black;
+
+}
 
 body {
   display: flex;
@@ -70,7 +74,6 @@ img {
   display: flex;
   flex-direction: wrap;
   justify-content: space-evenly;
-  background: rgba(88, 79, 79, 0.7);
   border-radius: 3%;
   width: 50%;
   padding: 10px;
@@ -105,7 +108,7 @@ img {
 h2 {
   display: flex;
   margin-left: 35%;
-  font-size: 35px;
+  font-size: 40px;
   color: silver;
 }
 
@@ -136,9 +139,7 @@ button {
   justify-content: flex-start;
   margin-top: -400px;
   font-weight: bold;
-  background: black url('../assets/Galaxy.jpg');
-  background-size: 100%;
-
+  background-color: black;
 }
 
 #arrow-right {
@@ -149,15 +150,17 @@ button {
   margin-top: -125px;
   margin-left: 90%;
   font-weight: bold;
-  background: black url('../assets/Galaxy.jpg');
-  background-size: 100%;
+  background-color: black;
 }
 
 #home{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 350px 450px
+  margin: 300px 450px;
+  width:80px;
+  height:80px;
 }
+
 
 </style>
