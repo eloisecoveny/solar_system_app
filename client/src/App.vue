@@ -10,6 +10,7 @@ import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
 import { eventBus } from './main.js'
 
+
 export default {
   name: "app",
   data(){
