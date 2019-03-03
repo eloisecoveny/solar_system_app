@@ -71,6 +71,10 @@ export default {
 
 <style lang="css" scoped>
 
+h1 {
+  color: white;
+}
+
 
 
 #planetIndex {
@@ -107,7 +111,7 @@ export default {
     left: 630px;
     width: 110px;
     height: 110px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 10s linear infinite;
     animation: spin-right 14s linear infinite;
@@ -134,7 +138,7 @@ export default {
     left: 603px;
     width: 160px;
     height: 160px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 18s linear infinite;
@@ -162,7 +166,7 @@ export default {
     left: 555px;
     width: 250px;
     height: 250px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 24s linear infinite;
@@ -191,7 +195,7 @@ export default {
     left: 500px;
     width: 350px;
     height: 350px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 40s linear infinite;
@@ -219,7 +223,7 @@ export default {
     left: 460px;
     width: 450px;
     height: 450px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 66s linear infinite;
@@ -247,7 +251,7 @@ export default {
     left: 400px;
     width: 550px;
     height: 550px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 69s linear infinite;
@@ -288,7 +292,7 @@ export default {
     left: 300px;
     width: 750px;
     height: 750px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 73s linear infinite;
@@ -316,7 +320,7 @@ export default {
     left: 250px;
     width: 900px;
     height: 900px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 80s linear infinite;
@@ -344,7 +348,7 @@ export default {
     left: 160px;
     width: 1100px;
     height: 1100px;
-    border: 2px #b2b2b2 dashed;
+    border: 2px #a09b9b dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
     animation: spin-right 85s linear infinite;
