@@ -2,7 +2,8 @@
   <div id="quiz-index">
     <h1>You're ready to take the test on:</h1>
     <p>{{ this.quizPlanet.name }}</p>
-    <planet-quiz :quizPlanet="quizPlanet"></planet-quiz>
+    <quiz-answers :quizAnswers="quizAnswers"></quiz-answers>
+    <planet-quiz :quizPlanet="quizPlanet" :quizPlanetAnswers="quizPlanetAnswers"></planet-quiz>
     <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 
@@ -10,6 +11,7 @@
 
 <script>
 import PlanetQuiz from './PlanetQuiz.vue'
+import QuizAnswers from './QuizAnswers.vue'
 import { eventBus } from '../main.js'
 
 export default {
@@ -17,10 +19,13 @@ export default {
   props: ["shuffledPlanets", "quizPlanet", "quizPlanetIndex"],
   data(){
     return{
+      quizPlanetAnswers: [],
+      quizAnswers: []
     }
   },
   components: {
-    PlanetQuiz
+    PlanetQuiz,
+    QuizAnswers
   },
   computed: {
     completed(){
@@ -33,6 +38,9 @@ export default {
   methods: {
     goHome(id){
       eventBus.$emit("go-home", id)
+    },
+    generateAnswers(){
+
     }
   }
 }

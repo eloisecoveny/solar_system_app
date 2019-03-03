@@ -1,11 +1,13 @@
 <template lang="html">
   <div id="quiz">
-    <draggable v-model="quizValues" @start="drag=true" @end="drag=false">
-      <div v-for="value in quizValues" :key="value.id">
-        {{ value.name }}
-      </div>
-    </draggable>
     <p>{{ quizPlanet.name }}</p>
+    <draggable v-model="answerFields">
+      <transition-group>
+        <div v-for="value in answerFields" :key="value.id">
+          {{ value }}
+        </div>
+      </transition-group>
+    </draggable>
   </div>
 </template>
 
@@ -17,9 +19,7 @@ export default {
   props: ['quizPlanet'],
   data(){
     return{
-      quizValues: [
-        "7 moons",
-        "blizzard"
+      answerFields: [
       ]
     }
   },
