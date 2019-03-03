@@ -93,7 +93,7 @@ db.planets.insertMany([
   },
   {
     name: "Uranus",
-    image: 'http://www.trbimg.com/img-51955bc6/turbine/la-sci-sn-neptune-uranus-windy-atmosphere-ice--001/600/600x591',
+    image: 'http://mediad.publicbroadcasting.net/p/krcc/files/styles/medium/public/201808/82_carousel_neptune_1.jpg',
     description: "The seventh planet from the Sun with the third largest diameter in our solar system, Uranus is very cold and windy. The ice giant is surrounded by 13 faint rings and 27 small moons as it rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side, orbiting the Sun like a rolling ball.",
     funFacts: {
       noMoons: 27,
@@ -106,7 +106,7 @@ db.planets.insertMany([
   },
   {
     name: "Neptune",
-    image: 'https://voyager.jpl.nasa.gov/assets/images/galleries/images-voyager-took/neptune/neptunex.gif',
+    image: 'https://i1.wp.com/images.wallpapersden.com/image/download/ios-11-ipad-earth_58644_3840x2160.jpg',
     description: "Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.",
     funFacts: {
       noMoons: 13,
