@@ -14,11 +14,21 @@
       <p class="pfun-facts">Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
     <p id="audio">Audio</p>
-    <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
-    <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
+    <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft"> < </button>
+    <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
     <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 </template>
+
+
+<script>
+export default {
+}
+</script>
+
+<style lang="css" scoped>
+</style>
+
 
 <script>
 import {eventBus} from '../main.js'
@@ -57,14 +67,15 @@ img {
   width: 40%;
 }
 
+
 #description {
   display: flex;
   flex-direction: wrap;
   justify-content: space-evenly;
   width: 50%;
-	padding: 10px;
+  padding: 10px;
   border: 1px;;
-  margin-left: 20px;
+  margin-left: 40px;
   color: silver;
 }
 
@@ -111,6 +122,29 @@ h3 {
   color: silver
 }
 
+button {
+  color:silver;
+}
 
+#arrow-left {
+  border: none;
+  font-size: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: -400px;
+  font-weight: bold
+
+}
+
+#arrow-right {
+  border: none;
+  font-size: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-top: -125px;
+  margin-left: 90%;
+  font-weight: bold
+}
 
 </style>
