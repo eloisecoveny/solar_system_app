@@ -1,45 +1,45 @@
 <template lang="html">
   <div id="planetIndex" >
     <h1>Solar System</h1>
-      <div id="sun-rotate" :planets="planets[0]" v-on:click="handleClick(index)" >
+      <div id="sun-rotate" v-on:click="handleClick(0)" >
         <div id="sun">
         </div>
       </div>
-      <div id="mercury-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="mercury-orbit" v-on:click="handleClick(1)" >
         <div id="mercury">
         </div>
       </div>
-      <div id="venus-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="venus-orbit" v-on:click="handleClick(2)" >
         <div id="venus">
         </div>
       </div>
-      <div id="earth-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="earth-orbit" v-on:click="handleClick(3)" >
         <div id="earth">
         </div>
       </div>
-      <div id="mars-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="mars-orbit" v-on:click="handleClick(4)" >
         <div id="mars">
         </div>
       </div>
-      <div id="jupiter-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="jupiter-orbit" v-on:click="handleClick(5)" >
         <div id="jupiter">
         </div>
       </div>
-      <div id="saturn-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="saturn-orbit" v-on:click="handleClick(6)" >
         <div id="saturn-ring">
         </div>
         <div id="saturn">
         </div>
       </div>
-      <div id="uranus-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="uranus-orbit" v-on:click="handleClick(7)" >
         <div id="uranus">
         </div>
       </div>
-      <div id="neptune-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="neptune-orbit" v-on:click="handleClick(8)" >
         <div id="neptune">
         </div>
       </div>
-      <div id="pluto-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+      <div id="pluto-orbit" v-on:click="handleClick(9)" >
         <div id="pluto">
         </div>
       </div>
