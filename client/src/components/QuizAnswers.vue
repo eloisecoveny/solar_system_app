@@ -36,10 +36,10 @@ export default {
     draggable
   },
   created(){
-    eventBus.$on('answerSelected', planet => {
+    eventBus.$on('correctAnswerSelected', planet => {
       this.targetDay = day
       // console.log('daySelected ' + this.targetRecipe)
-      this.sendRecipeData(this.targetRecipe);
+      this.sendAnswer(this.targetRecipe);
     });
   },
   methods: {
