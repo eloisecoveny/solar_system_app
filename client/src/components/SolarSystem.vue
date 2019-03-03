@@ -36,6 +36,14 @@
         <div id="uranus">
         </div>
       </div>
+      <div id="neptune-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+        <div id="neptune">
+        </div>
+      </div>
+      <div id="pluto-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+        <div id="pluto">
+        </div>
+      </div>
 
 
   </div>
@@ -70,15 +78,15 @@ export default {
   position: absolute;
   top: 210px;
   left: 665px;
-  animation: rotate-left 2s linear infinite;
+
 }
 
 #sun {
   position: absolute;
-  top: 90px;
-  left: -13px;
-  height: 120px;
-  width: 120px;
+  top: 45px;
+  left: -7px;
+  height: 60px;
+  width: 60px;
   border-radius: 100%;
   background: radial-gradient(circle at 30px 100px, #ffd000, #ff6702);
   transition: transform .2s;
@@ -88,22 +96,22 @@ export default {
 
 #mercury-orbit {
     position: absolute;
-    top: 260px;
-    left: 600px;
-    width: 220px;
-    height: 220px;
-    border: 2px #4A437F dashed;
+    top: 230px;
+    left: 630px;
+    width: 110px;
+    height: 110px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 10s linear infinite;
-    animation: spin-right 10s linear infinite;
+    animation: spin-right 14s linear infinite;
     z-index: 6;
 }
 #mercury {
   position: absolute;
-  top: 90px;
-  left: -13px;
-  height: 25px;
-  width: 25px;
+  top: 45px;
+  left: -7px;
+  height: 12px;
+  width: 12px;
   border-radius: 100%;
   background: radial-gradient(circle at 2px 25px, #ffe526, #e29b28);
   transition: transform .2s;
@@ -115,14 +123,14 @@ export default {
 
 #venus-orbit {
     position: absolute;
-    top: 230px;
-    left: 560px;
-    width: 320px;
-    height: 320px;
-    border: 2px #4A437F dashed;
+    top: 200px;
+    left: 603px;
+    width: 160px;
+    height: 160px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 13s linear infinite;
+    animation: spin-right 18s linear infinite;
     z-index: 5;
 }
 
@@ -130,8 +138,8 @@ export default {
     position: absolute;
     top: 80px;
     left: -13px;
-    height: 45px;
-    width: 45px;
+    height: 23px;
+    width: 23px;
     border-radius: 100%;
     background: radial-gradient(circle at 25px 25px, #ffa11e, #f76516);
     transition: transform .2s;
@@ -143,23 +151,23 @@ export default {
 
 #earth-orbit {
     position: absolute;
-    top: 150px;
-    left: 490px;
-    width: 500px;
-    height: 500px;
-    border: 2px #4A437F dashed;
+    top: 162px;
+    left: 555px;
+    width: 250px;
+    height: 250px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 15s linear infinite;
+    animation: spin-right 24s linear infinite;
     z-index: 4;
 }
 
 #earth {
     position: absolute;
     top: 150px;
-    left: -13px;
-    height: 50px;
-    width: 50px;
+    left: -5px;
+    height: 25px;
+    width: 25px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #00ad62, #69b1f4);
     transition: transform .2s;
@@ -171,23 +179,23 @@ export default {
 
 #mars-orbit {
     position: absolute;
-    top: 60px;
-    left: 380px;
-    width: 700px;
-    height: 700px;
-    border: 2px #4A437F dashed;
+    top: 100px;
+    left: 500px;
+    width: 350px;
+    height: 350px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 24s linear infinite;
+    animation: spin-right 40s linear infinite;
     z-index: 3;
 }
 
 #mars {
     position: absolute;
-    top: 170px;
-    left: 19px;
-    height: 38px;
-    width: 38px;
+    top: 150px;
+    left: -10px;
+    height: 19px;
+    width: 19px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #dda600, #bf7900);
     transition: transform .2s;
@@ -199,23 +207,23 @@ export default {
 
 #jupiter-orbit {
     position: absolute;
-    top: 10px;
-    left: 300px;
-    width: 900px;
-    height: 900px;
-    border: 2px #4A437F dashed;
+    top: 50px;
+    left: 460px;
+    width: 450px;
+    height: 450px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 28s linear infinite;
+    animation: spin-right 66s linear infinite;
     z-index: 2;
 }
 
 #jupiter {
     position: absolute;
     top: 170px;
-    left: 19px;
-    height: 80px;
-    width: 80px;
+    left: -18px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #dda600, #bf7900);
     transition: transform .2s;
@@ -227,23 +235,23 @@ export default {
 
 #saturn-orbit {
     position: absolute;
-    top: -80px;
-    left: 200px;
-    width: 1100px;
-    height: 1100px;
-    border: 2px #4A437F dashed;
+    top: -10px;
+    left: 400px;
+    width: 550px;
+    height: 550px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 28s linear infinite;
+    animation: spin-right 69s linear infinite;
     z-index: 1;
 }
 
 #saturn {
     position: absolute;
     top: 290px;
-    left: 10px;
-    height: 65px;
-    width: 65px;
+    left: -15px;
+    height: 33px;
+    width: 33px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #baa071, #ead6b2);
     transition: transform .2s;
@@ -266,31 +274,87 @@ export default {
   transform: scale(1.5);
 }
 
-#jupiter-orbit {
+#uranus-orbit {
     position: absolute;
-    top: -300px;
-    left: 0px;
-    width: 1500px;
-    height: 1500px;
-    border: 2px #4A437F dashed;
+    top: -100px;
+    left: 300px;
+    width: 750px;
+    height: 750px;
+    border: 2px #b2b2b2 dashed;
     border-radius: 100%;
     -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 28s linear infinite;
-    z-index: 2;
+    animation: spin-right 73s linear infinite;
+    z-index: 0;
 }
 
-#jupiter {
+#uranus {
     position: absolute;
     top: 170px;
-    left: 19px;
-    height: 80px;
-    width: 80px;
+    left: 28px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #dda600, #bf7900);
+    background: radial-gradient(circle at 5px 10px, #48cec7, #00fff1);
     transition: transform .2s;
 }
 
-#jupiter:hover {
+#uranus:hover {
+  transform: scale(1.5);
+}
+
+#neptune-orbit {
+    position: absolute;
+    top: -170px;
+    left: 250px;
+    width: 900px;
+    height: 900px;
+    border: 2px #b2b2b2 dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 5s linear infinite;
+    animation: spin-right 80s linear infinite;
+    z-index: 0;
+}
+
+#neptune {
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background: radial-gradient(circle at 5px 10px, #bc93ff, #d0b6f9);
+    transition: transform .2s;
+}
+
+#neptune:hover {
+  transform: scale(1.5);
+}
+
+#pluto-orbit {
+    position: absolute;
+    top: -245px;
+    left: 160px;
+    width: 1100px;
+    height: 1100px;
+    border: 2px #b2b2b2 dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 5s linear infinite;
+    animation: spin-right 85s linear infinite;
+    z-index: 0;
+}
+
+#pluto {
+    position: absolute;
+    top: 170px;
+    left: 135px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: radial-gradient(circle at 5px 10px, #e5e1da, #d0b6f9);
+    transition: transform .2s;
+}
+
+#pluto:hover {
   transform: scale(1.5);
 }
 
