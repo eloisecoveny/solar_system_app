@@ -7,8 +7,8 @@ db.planets.insertMany([
     image: 'https://i.ytimg.com/vi/orqeYbqSiLg/maxresdefault.jpg',
     description: "The Sun—the heart of our solar system—is a yellow dwarf star, a hot ball of glowing gases. Its gravity holds the solar system together, keeping everything from the biggest planets to the smallest particles of debris in its orbit. Electric currents in the Sun generate a magnetic field that is carried out through the solar system by the solar wind—a stream of electrically charged gas blowing outward from the Sun in all directions.",
     funFacts: {
-      noMoons: 0,
-      lengthOfYears: null,
+      noMoons: "0",
+      gravity: "28 times stronger than the force of gravity on the surface of the Earth"
 
     }
   },
@@ -17,8 +17,9 @@ db.planets.insertMany([
     image: 'https://images.wallpaperscraft.com/image/mercury_planet_space_133139_1920x1080.jpg',
     description: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere.",
     funFacts: {
-      noMoons: 0,
+      noMoons: "0",
       lengthOfYears: "88 Earth Days",
+      gravity: "87 times weaker than the force of gravity on the surface of the Earth"
     }
   },
   {
@@ -26,8 +27,9 @@ db.planets.insertMany([
     image: 'https://ak0.picdn.net/shutterstock/videos/19562020/thumb/1.jpg',
     description: "Second planet from the Sun and our closest planetary neighbor, Venus is similar in structure and size to Earth, but it is now a very different world. Venus spins slowly in the opposite direction most planets do. Its thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system—with surface temperatures hot enough to melt lead. Glimpses below the clouds reveal volcanoes and deformed mountains.",
     funFacts: {
-      noMoons: 0,
+      noMoons: "0",
       lengthOfYears: "225 Earth Days",
+      gravity: "Almost the same force of gravity than the surface of the Earth"
     }
   },
   {
@@ -37,6 +39,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 1,
       lengthOfYears: "365 Earth Days",
+      gravity: "9.8 m/s²"
     }
   },
   {
@@ -46,6 +49,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 2,
       lengthOfYears: "687 Earth Days",
+      gravity: "3 times weaker than the force of gravity on the surface of the Earth"
     }
   },
   {
@@ -55,6 +59,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 79,
       lengthOfYears: "4333 Earth Days",
+      gravity: "3 times stronger than the force of gravity on the surface of the Earth"
     }
   },
   {
@@ -64,6 +69,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 53,
       lengthOfYears: "10759 Earth Days",
+      gravity: "Almost the same force of gravity than the surface of the Earth"
     }
   },
   {
@@ -73,6 +79,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 27,
       lengthOfYears: "30687 Earth Days",
+      gravity: "Almost the same force of gravity than the surface of the Earth"
     }
   },
   {
@@ -82,6 +89,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 13,
       lengthOfYears: "60190 Earth Days",
+      gravity: "Almost the same force of gravity than the surface of the Earth"
     }
   },
   {
@@ -91,6 +99,7 @@ db.planets.insertMany([
     funFacts: {
       noMoons: 5,
       lengthOfYears: "90530 Earth Days",
+      gravity: "Its gravity is only one-fifteenth that of Earth's, so you'd only weigh 10 lbs. (4.5 kilograms) on Pluto if you weighed 150 lbs. (68 kg) on Earth."
     }
   }
 ])

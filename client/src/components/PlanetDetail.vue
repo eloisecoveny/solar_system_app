@@ -4,11 +4,15 @@
     <h2>{{selectedPlanet.name}}</h2>
     <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
     <p>{{selectedPlanet.description}}</p>
-    <p>Number of Moons: {{selectedPlanet.funFacts.no_moons}}</p>
-    <p>Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
-      <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
-      <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
-      <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
+    <div>
+      <h4>Fun Facts</h4>
+      <p>Number of Moons: {{selectedPlanet.funFacts.noMoons}}</p>
+      <p>Gravity: {{selectedPlanet.funFacts.gravity}}</p>
+      <p>Length of Year: {{selectedPlanet.funFacts.lengthOfYears}}</p>
+    </div>
+    <button v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft">Closer to Sun</button>
+    <button v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight">Further from Sun</button>
+    <button v-on:click="goHome(selectedPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 </template>
 
@@ -28,9 +32,7 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
-    textFormat(text){
-      text.to_s.gsub(/\n/, "<br/>")
-    }
+
   }
 }
 </script>
