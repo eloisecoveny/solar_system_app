@@ -26,10 +26,9 @@
         </div>
       </div>
       <div id="saturn-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
+        <div id="saturn-ring">
+        </div>
         <div id="saturn">
-          <div id="saturn-ring">
-
-          </div>
         </div>
       </div>
       <div id="uranus-orbit" v-for="(planet, index) in planets" v-on:click="handleClick(index)" >
@@ -75,8 +74,6 @@ h1 {
   color: white;
 }
 
-
-
 #planetIndex {
   align-items: center;
 }
@@ -95,7 +92,7 @@ h1 {
   height: 60px;
   width: 60px;
   border-radius: 100%;
-  background: radial-gradient(circle at 30px 100px, #ffd000, #ff6702);
+  background: radial-gradient(circle at 50% 50%, #ffd000, #ff6702);
   transition: transform .2s;
   z-index: 9;
 }
@@ -124,7 +121,7 @@ h1 {
   height: 12px;
   width: 12px;
   border-radius: 100%;
-  background: radial-gradient(circle at 2px 25px, #ffe526, #e29b28);
+  background: radial-gradient(circle at 50% 50%, #ffe526, #e29b28);
   transition: transform .2s;
 }
 
@@ -152,7 +149,7 @@ h1 {
     height: 23px;
     width: 23px;
     border-radius: 100%;
-    background: radial-gradient(circle at 25px 25px, #ffa11e, #f76516);
+    background: radial-gradient(circle at 50% 50%, #ffa11e, #f76516);
     transition: transform .2s;
 }
 
@@ -181,7 +178,7 @@ h1 {
     height: 25px;
     width: 25px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #00ad62, #69b1f4);
+    background: radial-gradient(circle at 50% 50%, #69b1f4, #00ad62);
     transition: transform .2s;
 }
 
@@ -209,7 +206,7 @@ h1 {
     height: 19px;
     width: 19px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #dda600, #bf7900);
+    background: radial-gradient(circle at 50% 50%, #dda600, #bf7900);
     transition: transform .2s;
 }
 
@@ -237,7 +234,7 @@ h1 {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #dda600, #bf7900);
+    background: radial-gradient(circle at 50% 50%, #876e00, #bf7900);
     transition: transform .2s;
 }
 
@@ -265,22 +262,21 @@ h1 {
     height: 33px;
     width: 33px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #baa071, #ead6b2);
+    background: radial-gradient(circle at 5px 10px, #baa071, #ffdf54);
     transition: transform .2s;
 }
 
-/* #saturn-ring {
-  position: fixed;
-  top: 150px;
-  left: 50px;
-  width: 110px;
+#saturn-ring {
+  position: absolute;
+  top: 290px;
+  left: -28px;
+  width: 60px;
   height: 30px;
   border: 4px #876220 solid;
   border-radius: 100%;
-  -webkit-animation: spin-right 0s linear infinite;
-  animation: spin-right 0s linear infinite;
-  z-index: 0;
-} */
+  -webkit-animation: spin-right 5s linear infinite;
+  animation: spin-right 69s linear infinite;
+}
 
 #saturn:hover {
   transform: scale(1.5);
@@ -306,7 +302,7 @@ h1 {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #48cec7, #00fff1);
+    background: radial-gradient(circle at 50% 50%, #7050fc, #48cec7);
     transition: transform .2s;
 }
 
@@ -334,7 +330,7 @@ h1 {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #bc93ff, #d0b6f9);
+    background: radial-gradient(circle at 50% 50%, #df65f7, #8c51c6);
     transition: transform .2s;
 }
 
@@ -362,7 +358,7 @@ h1 {
     height: 15px;
     width: 15px;
     border-radius: 100%;
-    background: radial-gradient(circle at 5px 10px, #e5e1da, #d0b6f9);
+    background: radial-gradient(circle at 50% 50%, #e5e1da, #d0b6f9);
     transition: transform .2s;
 }
 
