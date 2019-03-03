@@ -5,5 +5,5 @@ export const eventBus = new Vue()
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
 })

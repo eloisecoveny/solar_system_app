@@ -28,7 +28,7 @@ export default {
   components: {
     SolarSystem,
     PlanetDetail,
-    QuizManager
+    QuizManager,
   },
   mounted(){
     fetch('http://localhost:3000/api/planets/')
