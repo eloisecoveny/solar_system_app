@@ -171,7 +171,6 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #ffa11e, #f76516);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #venus:hover {
@@ -193,15 +192,13 @@ h1:hover {
 
 #earth {
     position: absolute;
-    top: 150px;
+    top: 158px;
     left: -5px;
     height: 31px;
     width: 31px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #69b1f4, #00ad62);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
-
 }
 
 #earth-moon {
@@ -214,13 +211,11 @@ h1:hover {
   background: radial-gradient(circle at 50% 50%, #e8e3e3, #b5b5b5);
   -webkit-animation: spin-left 5s linear infinite;
   animation: spin-left 75s linear infinite;
-  transform: rotate3d(0, 0, 0, -53deg);
-
 }
 
 #moon-orbit {
     position: absolute;
-    top: 142px;
+    top: 152px;
     left: -15px;
     width: 50px;
     height: 45px;
@@ -248,15 +243,13 @@ h1:hover {
 
 #mars {
     position: absolute;
-    top: 150px;
+    top: 130px;
     left: -10px;
     height: 23px;
     width: 23px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #dda600, #bf7900);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
-
 }
 
 #mars:hover {
@@ -279,13 +272,12 @@ h1:hover {
 #jupiter {
     position: absolute;
     top: 165px;
-    left: -23px;
+    left: -18px;
     height: 50px;
     width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #876e00, #bf7900);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #jupiter:hover {
@@ -307,19 +299,18 @@ h1:hover {
 
 #saturn {
     position: absolute;
-    top: 290px;
+    top: 247px;
     left: -15px;
     height: 41px;
     width: 41px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #baa071, #ffdf54);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #saturn-ring {
   position: absolute;
-  top: 295px;
+  top: 253px;
   left: -30px;
   width: 70px;
   height: 30px;
@@ -348,14 +339,13 @@ h1:hover {
 
 #uranus {
     position: absolute;
-    top: 165px;
+    top: 182px;
     left: 23px;
     height: 50px;
     width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #7050fc, #48cec7);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #uranus:hover {
@@ -377,14 +367,13 @@ h1:hover {
 
 #neptune {
     position: absolute;
-    top: 165px;
+    top: 160px;
     left: 70px;
     height: 50px;
     width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #df65f7, #8c51c6);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #neptune:hover {
@@ -413,7 +402,6 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #e5e1da, #d0b6f9);
     transition: transform .2s;
-    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #pluto:hover {
@@ -426,7 +414,6 @@ h1:hover {
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
     -o-transform: rotate(-360deg);
-    /* transform: rotate(-360deg); */
   }
 }
 
