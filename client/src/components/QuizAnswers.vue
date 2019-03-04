@@ -2,9 +2,14 @@
   <div>
     <h4>Answers</h4>
     <v-list class="list">
-      <draggable v-model="remAnswers" @start="drag=true" @end="drag=false" :move="answerSelected">
-        <v-card v-for="(answer, index) in remAnswers"
-        :key="index">
+      <draggable
+        v-model="remAnswers"
+
+        v-on:start="drag=true"
+        v-on:end="drag=false"
+        :group="{ name: 'answers', pull: 'clone', put: false }"
+        :move="answerSelected">
+          <v-card v-for="(answer, index) in remAnswers" :key="index">
           <v-card-title>
             <div id="answer">{{ answer }}</div>
           </v-card-title>
@@ -25,6 +30,7 @@ export default {
     return {
       targetAnswer: "",
       targetAnswerIndex: null,
+      targetField: null,
       remAnswers: []
     }
   },
@@ -49,11 +55,11 @@ export default {
       this.remAnswers = this.quizAnswers
     },
     answerSelected(event, originalEvent){
-      console.log(event);
-      console.log(originalEvent);
+      // console.log(event);
+      // console.log(originalEvent);
       this.targetAnswer = event.draggedContext.element
       this.targetAnswerIndex = event.draggedContext.index
-      // eventBus.$emit('moving-answer', this.targetAnswer);
+      eventBus.$emit()
     },
     newAnswer(answer){
       this.answers.push(answer)

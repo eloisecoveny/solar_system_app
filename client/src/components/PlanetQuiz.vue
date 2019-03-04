@@ -2,9 +2,14 @@
   <div id="quiz">
     <h4>{{ quizPlanet.name }}</h4>
     <v-list class="list">
-      <draggable v-model="answers" @start="drag=true" @end="drag=false" :move="returningAnswer()">
-        <v-card v-for="(answer, index) in answers"
-        :key="index">
+      <draggable
+        v-model="answers"
+        handle=".handle"
+        v-on:start="drag=true"
+        v-on:end="drag=false"
+        :group="{ name: 'answers', pull: 'clone', put: false }"
+        :move="returningAnswer">
+          <v-card v-for="(answer, index) in answers" :key="index">
           <v-card-title>
             <div id="answer">{{ answer }}</div>
           </v-card-title>
