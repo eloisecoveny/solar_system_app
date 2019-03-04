@@ -7,8 +7,6 @@
         :quizAnswers="quizAnswers"
         :quizPlanet="quizPlanet"
         :randomAnswers="randomAnswers" :planetAnswers="planetAnswers"></quiz>
-      <!-- <quiz-answers :quizAnswers="quizAnswers"></quiz-answers>
-      <planet-quiz :quizPlanet="quizPlanet" :planetAnswers="planetAnswers"></planet-quiz> -->
     <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 

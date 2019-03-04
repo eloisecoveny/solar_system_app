@@ -2,19 +2,19 @@
   <div class="row">
     <div class="col-3">
       <h3>Pick 4 answers</h3>
-      <draggable class="list-group" :list="rootAnswers" group="answers" @change="log">
-        <div
+      <draggable class="list-group" :list="rootAnswers" group="answers" v-on:change="log">
+        <v-card
           class="list-group-item"
           v-for="(answer, index) in rootAnswers"
           :key="`${answer.value}${answer.state}`">
-          {{ answer.value }} : {{ answer.state }}
-        </div>
+          <v-card-title>{{ answer.value }} : {{ answer.state }}</v-card-title>
+        </v-card>
       </draggable>
     </div>
 
     <div class="col-3">
       <h3>Place Here</h3>
-      <draggable class="list-group" :list="targetAnswers" group="answers" @change="log">
+      <draggable class="list-group" :list="targetAnswers" group="answers" v-on:change="log">
         <v-card
           class="list-group-item"
           v-for="(answer, index) in targetAnswers"
@@ -69,16 +69,12 @@ export default {
     },
     log(evt) {
       window.console.log(evt);
-      if(this.evaluate(evt.added.element)){
-      }
-
+      this.evaluate(evt.added.element);
+      // this.evaluate(evt.added.element)
     },
     evaluate(newAnswer){
-      this.planetAnswers.find((answer) => {
-        return newAnswer.value === answer.value
-        debugger;
-        newAnswer["state"] = true
-      })
+      let score = (this.planetAnswers.includes(newAnswer.value))
+        return newAnswer.state = score
     }
   }
 };
