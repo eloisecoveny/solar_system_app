@@ -34,8 +34,6 @@ export default {
       remAnswers: []
     }
   },
-  computed: {
-  },
   components: {
     draggable
   },

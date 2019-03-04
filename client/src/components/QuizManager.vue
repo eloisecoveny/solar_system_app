@@ -3,8 +3,12 @@
     <h1>You're ready to take the test on:</h1>
     {{ generateAnswers }}
     <p>{{ quizPlanet.name }}</p>
-      <quiz-answers :quizAnswers="quizAnswers"></quiz-answers>
-      <planet-quiz :quizPlanet="quizPlanet" :planetAnswers="planetAnswers"></planet-quiz>
+      <quiz
+        :quizAnswers="quizAnswers"
+        :quizPlanet="quizPlanet"
+        :randomAnswers="randomAnswers" :planetAnswers="planetAnswers"></quiz>
+      <!-- <quiz-answers :quizAnswers="quizAnswers"></quiz-answers>
+      <planet-quiz :quizPlanet="quizPlanet" :planetAnswers="planetAnswers"></planet-quiz> -->
     <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
   </div>
 
@@ -13,6 +17,7 @@
 <script>
 import PlanetQuiz from './PlanetQuiz.vue'
 import QuizAnswers from './QuizAnswers.vue'
+import Quiz from './Quiz.vue'
 import { eventBus } from '../main.js'
 
 export default {
@@ -27,7 +32,8 @@ export default {
   },
   components: {
     PlanetQuiz,
-    QuizAnswers
+    QuizAnswers,
+    Quiz
   },
   computed: {
     generateAnswers(){
