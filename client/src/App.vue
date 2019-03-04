@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="app">
+  <div class="animated fadeInDown faster" id="app">
     <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
     <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
   </div>
@@ -9,6 +9,7 @@
 import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
 import { eventBus } from './main.js'
+
 
 export default {
   name: "app",
@@ -58,4 +59,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#app {
+  animation-duration: 5s;
+}
+
 </style>
