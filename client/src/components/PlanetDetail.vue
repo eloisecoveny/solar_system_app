@@ -80,6 +80,8 @@ img {
 
 
 #description {
+  position: absolute;
+  z-index: 1;
   display: flex;
   border-radius: 3%;
   width: 50%;
@@ -93,13 +95,15 @@ img {
 }
 
 .fun-facts {
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 25%;
   padding: 10px;
   border: 1px;;
   margin-left: 60%;
-  margin-top: -150px;
+  margin-top: -50px;
   border: 1px solid black;
   border-style: double;
   border-width: 6px;
@@ -151,7 +155,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: -400px;
+  margin-top: -100px;
   font-weight: bold;
   background-color: black;
   cursor: pointer;
@@ -174,10 +178,12 @@ button:hover {
 }
 
 #home {
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 150px 450px;
+  margin: 200px 600px;
   width:80px;
   height:80px;
   cursor: pointer;
@@ -194,12 +200,18 @@ button:hover {
 }
 
 .audio {
-  margin: -250px 50px;
-  width: 20%;
+  position: absolute;
+  z-index: 1;
+  margin: 200px 90px;
+  width: 15%;
   border: 1px solid white;
   display: flex;
   align-items: center;
   border-radius: 8%;
+}
+
+.button-play:hover {
+  transform: scale(1.4);
 }
 
 
