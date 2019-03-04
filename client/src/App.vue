@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="animated fadeInDown delay-1s" id="app">
+  <div class="animated fadeInDown delay-0.5s" id="app">
     <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
     <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
   </div>
@@ -59,5 +59,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#app {
+  animation-duration: 5s;
+}
 
 </style>
