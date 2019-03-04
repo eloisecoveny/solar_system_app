@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="planetIndex" >
+  <div id="planetIndex">
     <h1>Solar System</h1>
       <div id="sun-rotate" v-on:click="handleClick(0)" >
         <div id="sun">
