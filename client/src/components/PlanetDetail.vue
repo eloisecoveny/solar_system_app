@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="planet-detail">
+  <div id="planet-detail" class="animated zoomIn faster">
     <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
     <h2>{{selectedPlanet.name}}</h2>
     <p id="description">{{selectedPlanet.description}}</p>
@@ -14,7 +14,7 @@
       <p class="pfun-facts">Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
-    <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
+    <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight" > > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
     <div class="audio">
       <h4>{{selectedPlanet.name}}'s Frecuency</h4>
