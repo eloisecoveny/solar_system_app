@@ -90,10 +90,10 @@ h1:hover {
 
 #planetIndex {
   align-items: center;
-  margin-top: 60px;
+  margin-top: 100px;
   width: 500px;
   height: 500px;
-  transform: rotate3d(1, 0, 0, 53deg);
+  transform: rotate3d(1, 0, 0, 46deg);
 }
 
 
@@ -106,10 +106,10 @@ h1:hover {
 
 #sun {
   position: absolute;
-  top: 38px;
-  left: -16px;
-  height: 75px;
-  width: 75px;
+  top: 36px;
+  left: -26px;
+  height: 80px;
+  width: 93px;
   border-radius: 100%;
   background: radial-gradient(circle at 50% 50%, #ffd000, #ff6702);
   transition: transform .2s;
