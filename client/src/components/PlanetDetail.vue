@@ -13,29 +13,18 @@
       <p class="pfun-facts" v-if="selectedPlanet.funFacts.starType">Star Type: {{selectedPlanet.funFacts.starType}}</p>
       <p class="pfun-facts">Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
-    <p v-if="audio" id="audio">Audio</p>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
+    <div class="audio">
+      <h4>{{selectedPlanet.name}}'s Frecuency</h4>
+      <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
+    </div>
   </div>
 </template>
 
 
-<script>
-export default {
-  name:'planet-detail',
-  const myTrack = new Audio("../assets/sound_example.mp3"),
-  data: {
-    audio: true
-  },
-  methods:{
-   audioPlay(){
-     myTrack.play()
-     this.audioPlay = true
-   }
- }
-}
-</script>
+
 
 <style lang="css" scoped>
 </style>
@@ -43,6 +32,7 @@ export default {
 
 <script>
 import {eventBus} from '../main.js'
+import {Howl, Howler} from 'howler';
 
 export default {
   name: "planet-detail",
@@ -57,6 +47,13 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
+    audioPlay(){
+      const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3"], volume: 0.8});
+      myTrack.play();
+    },
+    // audioPause(){
+    //   myTrack.pause();
+    // }
 
   }
 }
@@ -84,14 +81,13 @@ img {
 
 #description {
   display: flex;
-  flex-direction: wrap;
-  justify-content: space-evenly;
   border-radius: 3%;
   width: 50%;
+  height: 40%;
   padding: 10px;
-  border: 1px;;
+  border: 1px;
   margin-left: 90px;
-  margin-top: 20px;
+  padding: none;
   color: silver;
   font-size: 20px;
 }
@@ -112,6 +108,10 @@ img {
   border-radius: 5%;
 }
 
+.fun-facts:hover {
+  transform: scale(1.1);
+}
+
 .pfun-facts {
   background-color: #e89f68;
 
@@ -129,14 +129,9 @@ h3 {
   background-color: #e89f68
 }
 
-#audio {
-  display: flex;
-  flex-direction: wrap;
-  margin-top: -200px;
-  margin-left: 20px;
-  padding: 10px;
-  width: 20%;
-  color: silver
+h4 {
+  color: silver;
+  margin-left: 20px
 }
 
 button {
@@ -146,7 +141,7 @@ button {
 }
 
 button:hover {
-transform: scale(1.4);
+  transform: scale(1.4);
 
 }
 
@@ -191,5 +186,21 @@ transform: scale(1.4);
 #home:hover {
   transform: scale(1.4);
 }
+
+.button-play {
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+}
+
+.audio {
+  margin: -250px 50px;
+  width: 20%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  border-radius: 8%;
+}
+
 
 </style>
