@@ -230,7 +230,7 @@ h1:hover {
 }
 
 #earth:hover {
-  transform: scale(1.5) rotate3d(0, 1, 0, -53deg);
+  transform: scale(1.5);
 }
 
 #mars-orbit {
