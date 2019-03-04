@@ -19,6 +19,7 @@
     <div class="audio">
       <h4>{{selectedPlanet.name}}'s Frecuency</h4>
       <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
+      <!-- <button v-on:click="audioPlay()" type="button" name="button">Pause</button> -->
     </div>
   </div>
 </template>
@@ -48,7 +49,9 @@ export default {
       eventBus.$emit("go-home", id)
     },
     audioPlay(){
-      const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3"], volume: 0.8});
+      const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3", "./src/assets/" + this.selectedPlanet.name + ".ogg"],
+      autoplay: true,
+      volume: 0.8});
       myTrack.play();
     },
     // audioPause(){
