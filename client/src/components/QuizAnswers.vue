@@ -2,21 +2,16 @@
   <div>
     <h4>Answers</h4>
     <v-list class="list">
-        <div v-for="(answer, index) in quizAnswers">
-        <draggable :id="index" v-model="quizAnswers" :options="{group: { name:'quizAnswers', pull:'clone', put:'false'}}" @start="drag=true"
-            @end="drag=false" :move="chooseAnswer">
-
-            <v-card class="ma-2 pa-2">
-            <v-card-title>
-                <div class="headline">{{ answer }}</div>
-            </v-card-title>
-            </v-card>
-
-        </draggable>
-        </div>
+      <draggable v-model="remAnswers" @start="drag=true" @end="drag=false" :move="answerSelected">
+        <v-card v-for="(answer, index) in remAnswers"
+        :key="index">
+          <v-card-title>
+            <div id="answer">{{ answer }}</div>
+          </v-card-title>
+        </v-card>
+      </draggable>
     </v-list>
-</div>
-
+  </div>
 </template>
 
 <script>
@@ -25,42 +20,53 @@ import draggable from 'vuedraggable'
 
 export default {
   name: "quiz-answers",
-  props: ["quizAnswers", "quizPlanet"],
+  props: ["quizAnswers"],
   data(){
     return {
-      targetAnswer: null,
-      targetField: null
+      targetAnswer: "",
+      targetAnswerIndex: null,
+      remAnswers: []
     }
+  },
+  computed: {
   },
   components: {
     draggable
   },
-  created(){
-    eventBus.$on('correctAnswerSelected', planet => {
-      this.targetDay = day
-      // console.log('daySelected ' + this.targetRecipe)
-      this.sendAnswer(this.targetRecipe);
+  mounted(){
+    this.compAnswers()
+
+    eventBus.$on('answer-selected', answer => {
+      this.remAnswers.splice(targetAnswerIndex, 1)
+    });
+
+    eventBus.$on('returning-answer', answer => {
+      this.remAnswers.push(answer)
     });
   },
   methods: {
-    chooseAnswer(event){
-      // console.log('chooseRecipe ' + event.from.id);
-      this.targetAnswer = event.from.id;
+    compAnswers(){
+      this.remAnswers = this.quizAnswers
     },
-    sendAnswer(id){
-      // console.log('id ' + id)
-      const myAnswer = this.quizPlanetAnswers.filter((answer) => {
-        return answer.id == id;
-      });
-      const recipeData = {
-        day: this.targetField,
-        recipe: myAnswer
-      }
-      eventBus.$emit('sendingAnswer', recipeData);
+    answerSelected(event, originalEvent){
+      console.log(event);
+      console.log(originalEvent);
+      this.targetAnswer = event.draggedContext.element
+      this.targetAnswerIndex = event.draggedContext.index
+      // eventBus.$emit('moving-answer', this.targetAnswer);
+    },
+    newAnswer(answer){
+      this.answers.push(answer)
+      // eventBus.$emit('answer-returned', answer);
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
+
+#answer {
+  border: 1px solid black;
+}
+
 </style>

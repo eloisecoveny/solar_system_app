@@ -1,34 +1,16 @@
 <template lang="html">
   <div id="quiz">
     <h4>{{ quizPlanet.name }}</h4>
-        <v-container grid-list-md>
-            <v-layout row wrap>
-                <v-flex md6 v-for="(value, key) in answerFields">
-                    <v-card class="ma-2 pa-2">
-                        <draggable :id="key" v-model="answers" :options="{group:'answers'}" @start="drag=true"
-                            @end="drag=false" @add="newRecipe">
-                            <v-card-title class="headline">
-                                {{ capLetter(key) }}
-                            </v-card-title>
-                        </draggable>
-                        <v-card v-for="answer in value">
-                            <v-card-title class="headline">
-                                {{ answer[0] }}
-                            </v-card-title>
-                        </v-card>
-                    </v-card>
-                </v-flex>
-            </v-layout>
-        </v-container>
-
-
-    <draggable v-model="answerFields">
-      <transition-group>
-        <div v-for="value in answerFields" :key="value.id">
-          {{ value }}
-        </div>
-      </transition-group>
-    </draggable>
+    <v-list class="list">
+      <draggable v-model="answers" @start="drag=true" @end="drag=false" :move="returningAnswer()">
+        <v-card v-for="(answer, index) in answers"
+        :key="index">
+          <v-card-title>
+            <div id="answer">{{ answer }}</div>
+          </v-card-title>
+        </v-card>
+      </draggable>
+    </v-list>
   </div>
 </template>
 
@@ -38,23 +20,42 @@ import { eventBus } from '../main.js'
 
 export default {
   name: 'planet-quiz',
-  props: ['quizPlanet'],
+  props: ['quizPlanet', 'planetAnswers'],
   data(){
     return{
-      answerFields: [
-      ]
+      answers: ["answer 1"]
     }
+  },
+  mounted() {
+    eventBus.$on('moving-answer', (answer) => {
+      this.answers.push(answer)
+    });
+    eventBus.$on('answer-returned', (answer) => {
+      this.answerReturned(answer)
+    });
   },
   components: {
     draggable
   },
-  computed: {
-    evaluate(){
-
+  methods: {
+    returningAnswer(answer, index) {
+      eventBus.$emit('returning-answer', answer)
+    },
+    answerReturned(answer){
+      const index = this.answers.indexOf(answer)
+      this.answers.splice(index, 1)
+    },
+    newAnswer(answer) {
+      this.answers.push(answer)
+      eventBus.$emit('answer-selected', answer);
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
+
+/* #answer {
+  border: 1px solid black;
+} */
 </style>

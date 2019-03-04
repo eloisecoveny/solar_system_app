@@ -49,13 +49,15 @@ export default {
         return Object.values(planet.quizFacts)
       });
       allValues.push(this.shuffledPlanets.map(planet => planet.name))
-      const flattened = allValues.reduce((a, b) => a.concat(b), []
+      const singleArr = allValues.reduce((a, b) => a.concat(b), []
       );
-      flattened.sort((a, b) => 0.5 - Math.random())
-      this.randomAnswers = flattened.slice(0, 6)
+      singleArr.sort((a, b) => 0.5 - Math.random())
+      this.randomAnswers = singleArr.slice(0, 6)
     },
     compileQuizAnswers(){
-      this.quizAnswers = this.planetAnswers.concat(this.randomAnswers)
+       const answers = this.planetAnswers.concat(this.randomAnswers);
+       answers.sort((a, b) => 0.5 - Math.random());
+       this.quizAnswers = answers;
     }
   }
 }
