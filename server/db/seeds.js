@@ -54,7 +54,7 @@ db.planets.insertMany([
   },
   {
     name: "Mars",
-    image: 'https://hdqwalls.com/download/mars-4k-qhd-1920x1200.jpg',
+    image: 'https://ak2.picdn.net/shutterstock/videos/4810832/thumb/1.jpg',
     description: "The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere. This dynamic planet has seasons, polar ice caps, extinct volcanoes, canyons and weather. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago.",
     funFacts: {
       noMoons: 2,

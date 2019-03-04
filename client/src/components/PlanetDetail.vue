@@ -17,7 +17,7 @@
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
     <div class="audio">
-      <h4>{{selectedPlanet.name}}'s Frecuency</h4>
+      <h4>{{selectedPlanet.name}}'s Frequency</h4>
       <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
       <!-- <button v-on:click="audioPlay()" type="button" name="button">Pause</button> -->
     </div>
