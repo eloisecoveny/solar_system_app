@@ -77,9 +77,11 @@ export default {
 h1 {
   color: white;
   transition: transform .2s;
-  margin-top: 25px;
-  margin-left: 35px;
+  margin-top: -220px;
+  margin-left: 80px;
   float: left;
+  transform: rotate3d(0, 0, 0, -53deg);
+  font-size: 45px;
 }
 
 h1:hover {
@@ -88,6 +90,10 @@ h1:hover {
 
 #planetIndex {
   align-items: center;
+  margin-top: 60px;
+  width: 500px;
+  height: 500px;
+  transform: rotate3d(1, 0, 0, 53deg);
 }
 
 
@@ -95,22 +101,24 @@ h1:hover {
   position: absolute;
   top: 210px;
   left: 665px;
+
 }
 
 #sun {
   position: absolute;
-  top: 45px;
-  left: -7px;
-  height: 60px;
-  width: 60px;
+  top: 38px;
+  left: -16px;
+  height: 75px;
+  width: 75px;
   border-radius: 100%;
   background: radial-gradient(circle at 50% 50%, #ffd000, #ff6702);
   transition: transform .2s;
   z-index: 9;
+  transform: rotate3d(0, 1, 0, -53deg);
 }
 
 #sun:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate3d(0, 1, 0, -53deg);
 }
 
 
@@ -120,18 +128,19 @@ h1:hover {
     left: 630px;
     width: 110px;
     height: 110px;
-    border: 2px #a09b9b dashed;
+    border: 2px #a09b9b solid;
     border-radius: 100%;
-    -webkit-animation: spin-right 10s linear infinite;
-    animation: spin-right 12s linear infinite;
+    -webkit-animation: spin-left 10s linear infinite;
+    animation: spin-left 12s linear infinite;
     z-index: 8;
 }
+
 #mercury {
   position: absolute;
   top: 45px;
   left: -7px;
-  height: 12px;
-  width: 12px;
+  height: 15px;
+  width: 15px;
   border-radius: 100%;
   background: radial-gradient(circle at 50% 50%, #ffe526, #e29b28);
   transition: transform .2s;
@@ -145,12 +154,12 @@ h1:hover {
     position: absolute;
     top: 200px;
     left: 603px;
-    width: 160px;
-    height: 160px;
+    width: 165px;
+    height: 173px;
     border: 2px #a09b9b dashed;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 15s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 20s linear infinite;
     z-index: 7;
 }
 
@@ -158,11 +167,12 @@ h1:hover {
     position: absolute;
     top: 80px;
     left: -13px;
-    height: 23px;
-    width: 23px;
+    height: 28px;
+    width: 28px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #ffa11e, #f76516);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #venus:hover {
@@ -175,10 +185,10 @@ h1:hover {
     left: 555px;
     width: 250px;
     height: 250px;
-    border: 2px #a09b9b dashed;
+    border: 2px #a09b9b solid;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 24s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 30s linear infinite;
     z-index: 6;
 }
 
@@ -186,40 +196,42 @@ h1:hover {
     position: absolute;
     top: 150px;
     left: -5px;
-    height: 25px;
-    width: 25px;
+    height: 31px;
+    width: 31px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #69b1f4, #00ad62);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
+
 }
 
 #earth-moon {
   position: absolute;
   top: 10px;
   left: -2px;
-  width: 5px;
-  height: 5px;
+  width: 6.5px;
+  height: 6.5px;
   border-radius: 100%;
   background: radial-gradient(circle at 50% 50%, #e8e3e3, #b5b5b5);
-  -webkit-animation: spin-right 5s linear infinite;
-  animation: spin-right 75s linear infinite;
+  -webkit-animation: spin-left 5s linear infinite;
+  animation: spin-left 75s linear infinite;
+  transform: rotate3d(0, 0, 0, -53deg);
+
 }
 
 #moon-orbit {
     position: absolute;
-    top: 140px;
+    top: 142px;
     left: -15px;
-    width: 45px;
+    width: 50px;
     height: 45px;
     border-radius: 100%;
-
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 6s linear infinite;
-    z-index: 6;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 6s linear infinite;
 }
 
 #earth:hover {
-  transform: scale(1.5);
+  transform: scale(1.5) rotate3d(0, 1, 0, -53deg);
 }
 
 #mars-orbit {
@@ -230,8 +242,8 @@ h1:hover {
     height: 350px;
     border: 2px #a09b9b dashed;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 45s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 55s linear infinite;
     z-index: 5;
 }
 
@@ -239,11 +251,13 @@ h1:hover {
     position: absolute;
     top: 150px;
     left: -10px;
-    height: 19px;
-    width: 19px;
+    height: 23px;
+    width: 23px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #dda600, #bf7900);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
+
 }
 
 #mars:hover {
@@ -252,26 +266,27 @@ h1:hover {
 
 #jupiter-orbit {
     position: absolute;
-    top: 50px;
-    left: 460px;
-    width: 450px;
-    height: 450px;
-    border: 2px #a09b9b dashed;
+    top: 28px;
+    left: 428px;
+    width: 500px;
+    height: 500px;
+    border: 2px #a09b9b solid;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 70s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 70s linear infinite;
     z-index: 4;
 }
 
 #jupiter {
     position: absolute;
-    top: 170px;
-    left: -18px;
-    height: 40px;
-    width: 40px;
+    top: 165px;
+    left: -23px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #876e00, #bf7900);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #jupiter:hover {
@@ -280,14 +295,14 @@ h1:hover {
 
 #saturn-orbit {
     position: absolute;
-    top: -40px;
-    left: 370px;
-    width: 625px;
-    height: 625px;
+    top: -50px;
+    left: 356px;
+    width: 660px;
+    height: 660px;
     border: 2px #a09b9b dashed;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 75s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 105s linear infinite;
     z-index: 3;
 }
 
@@ -295,23 +310,24 @@ h1:hover {
     position: absolute;
     top: 290px;
     left: -15px;
-    height: 33px;
-    width: 33px;
+    height: 41px;
+    width: 41px;
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #baa071, #ffdf54);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #saturn-ring {
   position: absolute;
-  top: 290px;
-  left: -28px;
+  top: 295px;
+  left: -24px;
   width: 60px;
   height: 30px;
   border: 4px #876220 solid;
   border-radius: 100%;
-  -webkit-animation: spin-right 5s linear infinite;
-  animation: spin-right 75s linear infinite;
+  -webkit-animation: spin-left 5s linear infinite;
+  animation: spin-left 105s linear infinite;
 }
 
 #saturn:hover {
@@ -320,26 +336,27 @@ h1:hover {
 
 #uranus-orbit {
     position: absolute;
-    top: -100px;
-    left: 300px;
-    width: 750px;
-    height: 750px;
-    border: 2px #a09b9b dashed;
+    top: -120px;
+    left: 285px;
+    width: 800px;
+    height: 800px;
+    border: 2px #a09b9b solid;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 73s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 125s linear infinite;
     z-index: 2;
 }
 
 #uranus {
     position: absolute;
-    top: 170px;
-    left: 28px;
-    height: 40px;
-    width: 40px;
+    top: 165px;
+    left: 23px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #7050fc, #48cec7);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #uranus:hover {
@@ -348,26 +365,27 @@ h1:hover {
 
 #neptune-orbit {
     position: absolute;
-    top: -170px;
-    left: 250px;
-    width: 900px;
-    height: 900px;
+    top: -185px;
+    left: 226px;
+    width: 950px;
+    height: 950px;
     border: 2px #a09b9b dashed;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 80s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 145s linear infinite;
     z-index: 1;
 }
 
 #neptune {
     position: absolute;
-    top: 170px;
-    left: 60px;
-    height: 40px;
-    width: 40px;
+    top: 165px;
+    left: 70px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #df65f7, #8c51c6);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #neptune:hover {
@@ -380,44 +398,38 @@ h1:hover {
     left: 160px;
     width: 1100px;
     height: 1100px;
-    border: 2px #a09b9b dashed;
+    border: 2px #a09b9b solid;
     border-radius: 100%;
-    -webkit-animation: spin-right 5s linear infinite;
-    animation: spin-right 85s linear infinite;
+    -webkit-animation: spin-left 5s linear infinite;
+    animation: spin-left 185s linear infinite;
     z-index: 0;
 }
 
 #pluto {
     position: absolute;
-    top: 170px;
+    top: 165px;
     left: 135px;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #e5e1da, #d0b6f9);
     transition: transform .2s;
+    transform: rotate3d(0, 0, 0, -53deg);
 }
 
 #pluto:hover {
   transform: scale(1.9);
 }
 
-#cosmos {
-  background-size: 100%;
-  background-image: url('../assets/Galaxy.jpg');
-  position: fixed;
-  height: auto;
-  width: auto;
-}
-
-@-webkit-keyframes spin-right {
+@-webkit-keyframes spin-left {
   100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    /* transform: rotate(-360deg); */
   }
 }
+
 
 </style>
