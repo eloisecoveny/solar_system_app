@@ -101,7 +101,6 @@ h1:hover {
   position: absolute;
   top: 210px;
   left: 665px;
-
 }
 
 #sun {
@@ -321,8 +320,8 @@ h1:hover {
 #saturn-ring {
   position: absolute;
   top: 295px;
-  left: -24px;
-  width: 60px;
+  left: -30px;
+  width: 70px;
   height: 30px;
   border: 4px #876220 solid;
   border-radius: 100%;
