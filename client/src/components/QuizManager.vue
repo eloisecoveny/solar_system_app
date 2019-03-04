@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import PlanetQuiz from './PlanetQuiz.vue'
-import QuizAnswers from './QuizAnswers.vue'
 import Quiz from './Quiz.vue'
 import { eventBus } from '../main.js'
 
@@ -27,14 +25,18 @@ export default {
     return{
       planetAnswers: [],
       randomAnswers: [],
-      quizAnswers: []
+      quizAnswers: [],
+      reserves: []
     }
   },
   components: {
-    PlanetQuiz,
-    QuizAnswers,
     Quiz
   },
+  // watch: {
+    // planetAnswers(){
+    //   this.reserves = []
+    // }
+  // },
   computed: {
     generateAnswers(){
       const answers = Object.values(this.quizPlanet.quizFacts)
@@ -55,15 +57,39 @@ export default {
         return Object.values(planet.quizFacts)
       });
       allValues.push(this.shuffledPlanets.map(planet => planet.name))
-      const singleArr = allValues.reduce((a, b) => a.concat(b), []
-      );
+      const singleArr = allValues.reduce((a, b) => a.concat(b), []);
       singleArr.sort((a, b) => 0.5 - Math.random())
+      this.reserves = singleArr.slice(0, 10)
       this.randomAnswers = singleArr.slice(0, 6)
     },
     compileQuizAnswers(){
        const answers = this.planetAnswers.concat(this.randomAnswers);
        answers.sort((a, b) => 0.5 - Math.random());
-       this.quizAnswers = answers;
+       this.remDuplicates(answers)
+    },
+    remDuplicates(array){
+      const uniq = this.returnUniq(array)
+      if(uniq.length < 10){
+        uniq.push(this.reserves[0])
+        this.remDuplicates(uniq)
+      } else {
+        const objects = uniq.map(answer => {
+          let obj = {}
+          obj["value"] = answer
+          obj["state"] = false
+          return obj
+        })
+        this.quizAnswers = objects
+      };
+    },
+    returnUniq(array){
+      // return [...new Set(array.map(answer => answer))];
+      let results = [];
+      array.forEach(answer => {
+        if (!results.includes(answer)){
+          results.push(answer)
+        }});
+      return results;
     }
   }
 }

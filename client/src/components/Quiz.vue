@@ -1,33 +1,33 @@
 <template>
   <div class="row">
     <div class="col-3">
-      <h3>Draggable 1</h3>
+      <h3>Pick 4 answers</h3>
       <draggable class="list-group" :list="rootAnswers" group="answers" @change="log">
         <div
           class="list-group-item"
           v-for="(answer, index) in rootAnswers"
-          :key="answer">
-          {{ answer }}
+          :key="`${answer.value}${answer.state}`">
+          {{ answer.value }} : {{ answer.state }}
         </div>
       </draggable>
     </div>
 
     <div class="col-3">
-      <h3>Draggable 2</h3>
+      <h3>Place Here</h3>
       <draggable class="list-group" :list="targetAnswers" group="answers" @change="log">
-        <div
+        <v-card
           class="list-group-item"
           v-for="(answer, index) in targetAnswers"
-          :key="answer"
-        >
-          {{ answer }} {{ index }}
-        </div>
+          :key="`${answer.value}${answer.state}`">
+          <v-card-title>{{ answer.value }} : {{ answer.state }}</v-card-title>
+        </v-card>
       </draggable>
+      <img :src="quizPlanet.image" :alt="quizPlanet.name">
     </div>
 
-    <div class="col-3" :value="rootAnswers" name="List 1"></div>
+    <div class="col-3" :value="rootAnswers" name="rootAnswers"></div>
 
-    <div class="col-3" :value="targetAnswers" name="List 2"></div>
+    <div class="col-3" :value="targetAnswers" name="targetAnswers"></div>
 
   </div>
 </template>
@@ -69,7 +69,25 @@ export default {
     },
     log(evt) {
       window.console.log(evt);
+      if(this.evaluate(evt.added.element)){
+      }
+
+    },
+    evaluate(newAnswer){
+      this.planetAnswers.find((answer) => {
+        return newAnswer.value === answer.value
+        debugger;
+        newAnswer["state"] = true
+      })
     }
   }
 };
 </script>
+
+<style lang="css" scoped>
+
+img {
+  height: 20px;
+}
+
+</style>
