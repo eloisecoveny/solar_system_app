@@ -13,8 +13,8 @@
       <p class="pfun-facts" v-if="selectedPlanet.funFacts.starType">Star Type: {{selectedPlanet.funFacts.starType}}</p>
       <p class="pfun-facts">Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
-    <p id="audio">Audio</p>
-    <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft"> < </button>
+    <p v-if="audio" id="audio">Audio</p>
+    <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
   </div>
@@ -23,6 +23,17 @@
 
 <script>
 export default {
+  name:'planet-detail',
+  const myTrack = new Audio("../assets/sound_example.mp3"),
+  data: {
+    audio: true
+  },
+  methods:{
+   audioPlay(){
+     myTrack.play()
+     this.audioPlay = true
+   }
+ }
 }
 </script>
 
@@ -67,6 +78,7 @@ img {
   margin-left: 300px;
   width:500px;
   height:300px;
+  align-items: center
 }
 
 
@@ -78,7 +90,7 @@ img {
   width: 50%;
   padding: 10px;
   border: 1px;;
-  margin-left: 40px;
+  margin-left: 90px;
   margin-top: 20px;
   color: silver;
   font-size: 20px;
@@ -129,6 +141,13 @@ h3 {
 
 button {
   color:silver;
+  outline: none
+
+}
+
+button:hover {
+transform: scale(1.4);
+
 }
 
 #arrow-left {
@@ -141,6 +160,7 @@ button {
   font-weight: bold;
   background-color: black;
   cursor: pointer;
+  align-items:  center;
 }
 
 
@@ -154,17 +174,22 @@ button {
   font-weight: bold;
   background-color: black;
   cursor: pointer;
+  align-items:  center;
+
 }
 
-#home{
+#home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 300px 450px;
+  margin: 150px 450px;
   width:80px;
   height:80px;
   cursor: pointer;
 }
 
+#home:hover {
+  transform: scale(1.4);
+}
 
 </style>
