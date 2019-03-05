@@ -1,8 +1,9 @@
 <template lang="html">
-  <div class="">
+  <div id="flex-box">
     <h1>Congratulations!</h1>
+    <h3>Your Space Training is complete</h3>
 
-    <button v-on:click="goHome" type="button" name="buttonHome">Home</button>
+    <button v-on:click="goHome" type="button" name="buttonHome"> <<< Ready for launch</button>
   </div>
 </template>
 
@@ -19,8 +20,25 @@ export default {
 
 <style lang="css" scoped>
 
+#flex-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
   color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+h3 {
+  color: orange;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+button {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: rgb(98, 135, 193);
 }
 
 </style>

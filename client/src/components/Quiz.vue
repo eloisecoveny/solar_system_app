@@ -1,20 +1,15 @@
 <template>
-  <div id="quiz">
+  <div id="quiz-wrapper">
 
-    <div id="root-answers">
-      <h3>Pick 4 answers</h3>
-      <draggable class="list-group" :list="rootAnswers" group="answers" v-on:change="log">
-        <v-card
-          class="list-group-item"
-          v-for="(answer, index) in rootAnswers"
-          :key="`${answer.value}${answer.state}`">
-          <v-card-title>{{ answer.value }}</v-card-title>
-        </v-card>
-      </draggable>
+    <div id="quiz">
+
+    <div id="flex">
+      <h3>What planet is this?</h3>
+      <img :src="quizPlanet.image" :alt="quizPlanet.name">
     </div>
 
     <div id="target-answers">
-      <h3>Place Here</h3>
+      <h3>Drop your answers here</h3>
       <draggable class="list-group" :list="targetAnswers" group="answers" v-on:change="log">
         <v-card
           :class="{ correct: answer.state, incorrect: !answer.state }"
@@ -25,13 +20,26 @@
       </draggable>
     </div>
 
-    <img :src="quizPlanet.image" :alt="quizPlanet.name">
+    <div id="root-answers">
+      <h3>Guess which four are correct</h3>
+      <draggable class="list-group" :list="rootAnswers" group="answers" v-on:change="log">
+        <v-card
+          class="list-group-item"
+          v-for="(answer, index) in rootAnswers"
+          :key="`${answer.value}${answer.state}`">
+          <v-card-title>{{ answer.value }}</v-card-title>
+        </v-card>
+      </draggable>
+    </div>
 
     <div class="col-3" :value="rootAnswers" name="rootAnswers"></div>
 
     <div class="col-3" :value="targetAnswers" name="targetAnswers"></div>
 
-    <button v-if="nextQuizBtn" v-on:click="nextQuiz" type="button" name="next-quiz">Next Quiz</button>
+    </div>
+    <div id="button">
+      <button v-if="nextQuizBtn" v-on:click="nextQuiz" type="button" name="next-quiz">Continue Space Training >>></button>
+    </div>
 
   </div>
 </template>
@@ -105,41 +113,55 @@ export default {
   display: flex;
   justify-content: space-around;
   margin: 0;
+  flex-wrap: wrap;
+  height: 38rem;
 }
 
 #root-answers, #target-answers {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 30px;
-  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  padding: 15px;
   width: 25%;
 }
 
 div.v-card__title {
   margin: 5px;
   radius: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
-  height: 150px;
+  height: 200px;
+  margin-top: 20px;
 }
 
 h3 {
-  color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: rgb(98, 135, 193);
+  font-size: 40px;
 }
 
 button {
   color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 40px;
+}
+
+#button {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
 }
 
 .correct {
   /* border: solid green; */
-  background-color: green;
+  background-color: rgb(47, 124, 59);
   /* border-radius: 5%; */
 }
 
 .incorrect {
-  background-color: red;
+  background-color: rgb(142, 31, 49);
 }
 
 div.v-card {
@@ -153,6 +175,19 @@ div.v-card:active {
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
+    background-color: orange;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+
+#flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 27px;
+  margin-left: 30px;
 }
 
 </style>

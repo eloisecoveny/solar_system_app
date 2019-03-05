@@ -2,11 +2,15 @@
 
   <div class="animated fadeInDown faster" id="app">
 
+    <div id="button">
+      <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Space Training >>></button>
+    </div>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
 
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
-
-    <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
 
     <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
 
@@ -102,8 +106,7 @@ export default {
       // eventBus.$emit("new-planet-quiz", (event))
     },
     quizCompleted(){
-      debugger;
-      this.quizCompleted = true
+      this.completed = true
     }
   }
 }
@@ -115,8 +118,18 @@ export default {
   animation-duration: 5s;
 }
 
+#button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
   color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  color: rgb(98, 135, 193);
 }
 
 </style>
