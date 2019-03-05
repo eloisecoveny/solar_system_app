@@ -19,8 +19,6 @@
     <div class="audio">
       <h4>{{selectedPlanet.name}}'s Frecuency</h4>
       <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
-      <!-- <button v-on:click="audioPlay()" type="button" name="button">Pause</button> -->
-    </div>
   </div>
 </template>
 
@@ -50,10 +48,6 @@ export default {
       volume: 0.8});
       myTrack.play();
     },
-    // audioPause(){
-    //   myTrack.pause();
-    // }
-
   }
 }
 </script>
