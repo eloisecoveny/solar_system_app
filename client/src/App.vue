@@ -78,7 +78,7 @@ export default {
       this.takeQuiz()
     },
     takeQuiz(){
-      this.quizPlanetIndex = 0
+      this.quizPlanetIndex = 8
       this.quizPlanet = this.shuffledPlanets[this.quizPlanetIndex]
     },
     nextQuiz(){

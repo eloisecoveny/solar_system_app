@@ -43,7 +43,7 @@ import { deepEqual } from "../lib/DeepEqual.js"
 export default {
   name: "quiz",
   display: "Two Lists",
-  props: ["quizPlanet", "quizAnswers", "randomAnswers", "planetAnswers"],
+  props: ["quizPlanet", "quizAnswers", "randomAnswers", "planetAnswers", "quizPlanetIndex"],
   order: 1,
   components: {
     draggable
