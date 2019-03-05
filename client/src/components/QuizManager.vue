@@ -39,7 +39,7 @@ export default {
       this.planetAnswers = answers
       this.generateRandom()
       this.compileQuizAnswers()
-      // 
+      //
       // setTimeout(() => {
       //   eventBus.$emit("reset", (event))
       // }, 250);

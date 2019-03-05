@@ -18,6 +18,7 @@ db.planets.insertMany([
       starType: "Yellow Dwarf",
       temperature: "10,000°F / 5538°C"
     }
+    frequency:"https://www.youtube.com/embed/sGsyvN-egkA"
   },
   {
     name: "Mercury",
@@ -39,6 +40,8 @@ db.planets.insertMany([
       starType: "Terrestrial",
       temperature: "800°F / 430°C to -290°F / -180°C"
     }
+    frequency:"https://www.youtube.com/embed/R-B7nM7zHfM"
+
   },
   {
     name: "Venus",
@@ -60,6 +63,7 @@ db.planets.insertMany([
       planetType: "Terrestrial",
       temperature: "1880°F / 470°C"
     }
+    frequency:"https://www.youtube.com/embed/4SdfCTl0TQE"
   },
   {
     name: "Earth",
@@ -80,10 +84,11 @@ db.planets.insertMany([
       gravity: "Gravity is 9.8 m/s²",
       planetType: "Terrestrial",
     }
+    frequency: "https://www.youtube.com/embed/BJ9pkEiI4OQ"
   },
   {
     name: "Mars",
-    image: 'https://hdqwalls.com/download/mars-4k-qhd-1920x1200.jpg',
+    image: 'https://ak2.picdn.net/shutterstock/videos/4810832/thumb/1.jpg',
     description: "The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere. This dynamic planet has seasons, polar ice caps, extinct volcanoes, canyons and weather. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago.",
     funFacts: {
       noMoons: 2,
@@ -101,6 +106,7 @@ db.planets.insertMany([
       planetType: "Terrestrial",
       temperature: "70°F / 20°C to -225°F / -153°C"
     }
+    frequency: "https://www.youtube.com/embed/gYyn5kJ7sPk"
   },
   {
     name: "Jupiter",
@@ -122,6 +128,7 @@ db.planets.insertMany([
       planetType: "Gas Giant",
       temperature: "-190°F / -128°C to 9°F / -13°C"
     }
+    frequency: "https://www.youtube.com/embed/dnG1sQNvBiA"
   },
   {
     name: "Saturn",
@@ -143,10 +150,11 @@ db.planets.insertMany([
       planetType: "Gas Giant",
       temperature: "-288°F / -178°C"
     }
+    frequency: "https://www.youtube.com/embed/Zts0fSf08DM"
   },
   {
     name: "Uranus",
-    image: 'http://www.trbimg.com/img-51955bc6/turbine/la-sci-sn-neptune-uranus-windy-atmosphere-ice--001/600/600x591',
+    image: 'http://mediad.publicbroadcasting.net/p/krcc/files/styles/medium/public/201808/82_carousel_neptune_1.jpg',
     description: "The seventh planet from the Sun with the third largest diameter in our solar system, Uranus is very cold and windy. The ice giant is surrounded by 13 faint rings and 27 small moons as it rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side, orbiting the Sun like a rolling ball.",
     funFacts: {
       noMoons: 27,
@@ -164,10 +172,11 @@ db.planets.insertMany([
       planetType: "Ice Giant",
       temperature: "-371°F / -224°C"
     }
+    frequency: "https://www.youtube.com/embed/5Mfp9f8a7QM"
   },
   {
     name: "Neptune",
-    image: 'https://voyager.jpl.nasa.gov/assets/images/galleries/images-voyager-took/neptune/neptunex.gif',
+    image: 'https://i1.wp.com/images.wallpapersden.com/image/download/ios-11-ipad-earth_58644_3840x2160.jpg',
     description: "Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.",
     funFacts: {
       noMoons: 13,
@@ -185,6 +194,7 @@ db.planets.insertMany([
       planetType: "Ice Giant",
       temperature: "-392°F / -200°C"
     }
+    frequency: "https://www.youtube.com/embed/3gxzPhp2bL0"
   },
   {
     name: "Pluto",
@@ -206,5 +216,6 @@ db.planets.insertMany([
       planetType: "Dwarf",
       temperature: "-400°F / -240°C to -360°F / -218°C"
     }
+    frequency: "https://www.youtube.com/embed/x0hbFWeGMOg"
   }
 ])

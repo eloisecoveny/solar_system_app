@@ -1,9 +1,15 @@
 <template lang="html">
+<<<<<<< HEAD
   <div id="app">
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
     <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
     <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
+=======
+  <div class="animated fadeInDown faster" id="app">
+    <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
+    <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
+>>>>>>> develop
   </div>
 </template>
 
@@ -12,6 +18,7 @@ import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
 import QuizManager from './components/QuizManager.vue'
 import { eventBus } from './main.js'
+
 
 export default {
   name: "app",
@@ -94,4 +101,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#app {
+  animation-duration: 5s;
+}
+
 </style>
