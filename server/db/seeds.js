@@ -17,7 +17,7 @@ db.planets.insertMany([
       gravity: "28 times Earth's gravity",
       starType: "Yellow Dwarf",
       temperature: "10,000°F / 5538°C"
-    }
+    },
     frequency:"https://www.youtube.com/embed/sGsyvN-egkA"
   },
   {
@@ -39,7 +39,7 @@ db.planets.insertMany([
       gravity: "87 times weaker than Earth's gravity",
       starType: "Terrestrial",
       temperature: "800°F / 430°C to -290°F / -180°C"
-    }
+    },
     frequency:"https://www.youtube.com/embed/R-B7nM7zHfM"
 
   },
@@ -62,7 +62,7 @@ db.planets.insertMany([
       gravity: "Almost the same as Earth",
       planetType: "Terrestrial",
       temperature: "1880°F / 470°C"
-    }
+    },
     frequency:"https://www.youtube.com/embed/4SdfCTl0TQE"
   },
   {
@@ -83,7 +83,7 @@ db.planets.insertMany([
       daysEarth: "One day is 24 Earth hours",
       gravity: "Gravity is 9.8 m/s²",
       planetType: "Terrestrial",
-    }
+    },
     frequency: "https://www.youtube.com/embed/BJ9pkEiI4OQ"
   },
   {
@@ -105,7 +105,7 @@ db.planets.insertMany([
       gravity: "Gravity is 3 times weaker than Earth",
       planetType: "Terrestrial",
       temperature: "70°F / 20°C to -225°F / -153°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/gYyn5kJ7sPk"
   },
   {
@@ -127,7 +127,7 @@ db.planets.insertMany([
       gravity: "Gravity is 3 times stronger than Earth",
       planetType: "Gas Giant",
       temperature: "-190°F / -128°C to 9°F / -13°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/dnG1sQNvBiA"
   },
   {
@@ -149,7 +149,7 @@ db.planets.insertMany([
       gravity: "Gravity is almost the same as Earth's",
       planetType: "Gas Giant",
       temperature: "-288°F / -178°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/Zts0fSf08DM"
   },
   {
@@ -171,7 +171,7 @@ db.planets.insertMany([
       gravity: "Gravity is almost the same as Earth",
       planetType: "Ice Giant",
       temperature: "-371°F / -224°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/5Mfp9f8a7QM"
   },
   {
@@ -193,7 +193,7 @@ db.planets.insertMany([
       gravity: "Gravity is almost the same as Earth",
       planetType: "Ice Giant",
       temperature: "-392°F / -200°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/3gxzPhp2bL0"
   },
   {
@@ -215,7 +215,7 @@ db.planets.insertMany([
       gravity: "Gravity is one-fifteenth of Earth's",
       planetType: "Dwarf",
       temperature: "-400°F / -240°C to -360°F / -218°C"
-    }
+    },
     frequency: "https://www.youtube.com/embed/x0hbFWeGMOg"
   }
 ])

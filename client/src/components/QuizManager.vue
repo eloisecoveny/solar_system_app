@@ -7,7 +7,9 @@
         :quizAnswers="quizAnswers"
         :quizPlanet="quizPlanet"
         :randomAnswers="randomAnswers" :planetAnswers="planetAnswers"></quiz>
-    <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
+    <div class="button">
+      <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
+    </div>
   </div>
 
 </template>
@@ -106,4 +108,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  color: white;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
 </style>

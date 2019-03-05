@@ -102,18 +102,36 @@ export default {
 
 <style lang="css" scoped>
 
-/* #quiz {
+#quiz {
   display: flex;
+  justify-content: space-around;
+  margin: 0;
 }
 
 #root-answers, #target-answers {
-  margin: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
   padding: 20px;
-  width: 30%;
-} */
+  width: 25%;
+  radius: 10%;
+}
+
+div.v-card__title {
+  margin: 5px;
+}
 
 img {
   height: 150px;
 }
+
+h3 {
+  color: white;
+}
+
+button {
+  color: white;
+}
+
 
 </style>

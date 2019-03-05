@@ -1,15 +1,10 @@
 <template lang="html">
-<<<<<<< HEAD
-  <div id="app">
+
+  <div class="animated fadeInDown faster" id="app">
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
     <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
     <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
-=======
-  <div class="animated fadeInDown faster" id="app">
-    <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
-    <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
->>>>>>> develop
   </div>
 </template>
 
@@ -104,6 +99,10 @@ export default {
 
 #app {
   animation-duration: 5s;
+}
+
+button {
+  color: white;
 }
 
 </style>
