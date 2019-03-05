@@ -178,11 +178,18 @@ button:hover {
   width:80px;
   height:80px;
   cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: height 4s;
+  transition: height 4s;
 }
 
 #home:hover {
   transform: scale(1.4);
+  height: 200px;
 }
+
 
 .audio {
   position: absolute;
