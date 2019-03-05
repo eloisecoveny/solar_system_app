@@ -57,11 +57,13 @@ export default {
       this.quizPlanet = null
       this.quizPlanetIndex = null
     })
-    eventBus.$on("completed-quiz", () => {
-      if(this.planetQuizIndex < 9){
+    eventBus.$on("next-quiz", () => {
+      console.log("Quiz index", this.quizPlanetIndex);
+      if(this.quizPlanetIndex < 9){
         this.nextQuiz()
-      } else(this.quizCompleted())
-    })
+      } else {
+        (this.quizCompleted())
+    }})
   },
   computed: {
   },
@@ -82,6 +84,7 @@ export default {
     nextQuiz(){
       this.quizPlanetIndex += 1
       this.quizPlanet = this.shuffledPlanets[this.quizPlanetIndex]
+      // eventBus.$emit("new-planet-quiz", (event))
     },
     quizCompleted(){
       console.log("well done!");

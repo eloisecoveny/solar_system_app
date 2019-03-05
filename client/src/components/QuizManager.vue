@@ -30,11 +30,22 @@ export default {
   components: {
     Quiz
   },
-  // watch: {
-    // planetAnswers(){
-    //   this.reserves = []
-    // }
-  // },
+  watch: {
+    quizPlanet: function(newPlanet){
+      const answers = Object.values(newPlanet.quizFacts)
+      answers.sort((a, b) => 0.5 - Math.random())
+      answers.splice(3, (answers.length - 3))
+      answers.push(newPlanet.name)
+      this.planetAnswers = answers
+      this.generateRandom()
+      this.compileQuizAnswers()
+      // 
+      // setTimeout(() => {
+      //   eventBus.$emit("reset", (event))
+      // }, 250);
+
+    }
+  },
   computed: {
     generateAnswers(){
       const answers = Object.values(this.quizPlanet.quizFacts)
@@ -57,7 +68,7 @@ export default {
       allValues.push(this.shuffledPlanets.map(planet => planet.name))
       const singleArr = allValues.reduce((a, b) => a.concat(b), []);
       singleArr.sort((a, b) => 0.5 - Math.random())
-      this.reserves = singleArr.slice(0, 10)
+      this.reserves = singleArr.slice(0, 20)
       this.randomAnswers = singleArr.slice(0, 6)
     },
     compileQuizAnswers(){
@@ -68,7 +79,7 @@ export default {
     remDuplicates(array){
       const uniq = this.returnUniq(array)
       if(uniq.length < 10){
-        uniq.push(this.reserves[0])
+        uniq.push(this.reserves.shift())
         this.remDuplicates(uniq)
       } else {
         const objects = uniq.map(answer => {
@@ -77,6 +88,7 @@ export default {
           obj["state"] = false
           return obj
         })
+
         this.quizAnswers = objects
       };
     },

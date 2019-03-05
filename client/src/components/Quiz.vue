@@ -1,6 +1,7 @@
 <template>
-  <div class="row">
-    <div class="col-3">
+  <div id="quiz">
+
+    <div id="root-answers">
       <h3>Pick 4 answers</h3>
       <draggable class="list-group" :list="rootAnswers" group="answers" v-on:change="log">
         <v-card
@@ -12,7 +13,7 @@
       </draggable>
     </div>
 
-    <div class="col-3">
+    <div id="target-answers">
       <h3>Place Here</h3>
       <draggable class="list-group" :list="targetAnswers" group="answers" v-on:change="log">
         <v-card
@@ -22,18 +23,22 @@
           <v-card-title>{{ answer.value }} : {{ answer.state }}</v-card-title>
         </v-card>
       </draggable>
-      <img :src="quizPlanet.image" :alt="quizPlanet.name">
     </div>
+
+    <img :src="quizPlanet.image" :alt="quizPlanet.name">
 
     <div class="col-3" :value="rootAnswers" name="rootAnswers"></div>
 
     <div class="col-3" :value="targetAnswers" name="targetAnswers"></div>
 
+    <button v-if="nextQuizBtn" v-on:click="nextQuiz" type="button" name="next-quiz">Next Quiz</button>
+
   </div>
 </template>
 <script>
 import draggable from "vuedraggable";
-import { eventBus } from "../main.js"
+import { eventBus } from "../main.js";
+import DeepEqual from "../lib/DeepEqual.js"
 
 export default {
   name: "quiz",
@@ -46,8 +51,22 @@ export default {
   data() {
     return {
       rootAnswers: [],
-      targetAnswers: []
+      targetAnswers: [],
+      nextQuizBtn: false
     };
+  },
+  watch: {
+    quizAnswers: function(newQuizAnswers, oldQuizAnswers){
+      if(this.deepEqual(newQuizAnswers, oldQuizAnswers)){
+        this.targetAnswers = []
+        this.nextQuizBtn = false
+        this.rootAnswers = []
+        this.compAnswers()
+      }
+      // if(newQuizAnswers !== oldQuizAnswers){
+        // this.targetAnswers = []
+      // }
+    }
   },
   mounted(){
     this.compAnswers()
@@ -56,25 +75,26 @@ export default {
     compAnswers(){
       this.rootAnswers = this.quizAnswers
     },
-    add() {
-      this.list.push({ name: "Juan" });
-    },
-    replace() {
-      this.list = [{ name: "Edgard" }];
-    },
-    clone(el) {
-      return {
-        name: el.name + " cloned"
-      };
-    },
     log(evt) {
-      window.console.log(evt);
-      this.evaluate(evt.added.element);
-      // this.evaluate(evt.added.element)
+      if(evt.added){
+        window.console.log(evt);
+        this.evaluate(evt.added.element);
+        if(this.targetAnswers.length === 4){
+          if(this.targetAnswers.every(answer => {
+            return answer.state === true
+          })){
+            this.nextQuizBtn = true
+          }
+        }
+      }
     },
     evaluate(newAnswer){
       let score = (this.planetAnswers.includes(newAnswer.value))
-        return newAnswer.state = score
+      return newAnswer.state = score
+    },
+    nextQuiz(){
+      // console.log("On to the next quiz!");
+      eventBus.$emit("next-quiz", (event))
     }
   }
 };
@@ -82,8 +102,18 @@ export default {
 
 <style lang="css" scoped>
 
+/* #quiz {
+  display: flex;
+}
+
+#root-answers, #target-answers {
+  margin: 30px;
+  padding: 20px;
+  width: 30%;
+} */
+
 img {
-  height: 20px;
+  height: 150px;
 }
 
 </style>
