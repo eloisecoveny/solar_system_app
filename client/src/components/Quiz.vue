@@ -93,7 +93,6 @@ export default {
       return newAnswer.state = score
     },
     nextQuiz(){
-      // console.log("On to the next quiz!");
       eventBus.$emit("next-quiz", (event))
     }
   }

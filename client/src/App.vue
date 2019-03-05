@@ -1,10 +1,17 @@
 <template lang="html">
 
   <div class="animated fadeInDown faster" id="app">
+
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
+
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
+
     <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
+
     <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
+
+    <completed-quiz v-if="completed"></completed-quiz>
+
   </div>
 </template>
 
@@ -12,6 +19,7 @@
 import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
 import QuizManager from './components/QuizManager.vue'
+import CompletedQuiz from './components/CompletedQuiz.vue'
 import { eventBus } from './main.js'
 
 
@@ -24,13 +32,15 @@ export default {
       selectedPlanet: null,
       shuffledPlanets: [],
       quizPlanet: null,
-      quizPlanetIndex: null
+      quizPlanetIndex: null,
+      completed: false
     }
   },
   components: {
     SolarSystem,
     PlanetDetail,
     QuizManager,
+    CompletedQuiz
   },
   mounted(){
     fetch('http://localhost:3000/api/planets/')
@@ -66,6 +76,9 @@ export default {
       } else {
         (this.quizCompleted())
     }})
+    eventBus.$on("return-home", () => {
+      this.completed = false
+    })
   },
   computed: {
   },
@@ -80,7 +93,7 @@ export default {
       this.takeQuiz()
     },
     takeQuiz(){
-      this.quizPlanetIndex = 0
+      this.quizPlanetIndex = 8
       this.quizPlanet = this.shuffledPlanets[this.quizPlanetIndex]
     },
     nextQuiz(){
@@ -89,7 +102,8 @@ export default {
       // eventBus.$emit("new-planet-quiz", (event))
     },
     quizCompleted(){
-      console.log("well done!");
+      debugger;
+      this.quizCompleted = true
     }
   }
 }
