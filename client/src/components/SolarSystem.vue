@@ -82,6 +82,7 @@ h1 {
   float: left;
   transform: rotate3d(0, 0, 0, -53deg);
   font-size: 45px;
+  font-family: 'Abel', sans-serif;
 }
 
 h1:hover {

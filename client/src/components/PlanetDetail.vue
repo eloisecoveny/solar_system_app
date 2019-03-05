@@ -121,19 +121,25 @@ img {
 
 .pfun-facts {
   background-color: #e89f68;
+}
 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
   display: flex;
   margin-left: 35%;
-  font-size: 40px;
+  font-size: 50px;
   color: silver;
+  font-family: 'Abel', sans-serif;
 }
 
 h3 {
+  font-size: 20px;
   margin: 2px;
-  background-color: #e89f68
+  background-color: #e89f68;
+  font-family: 'Abel', sans-serif;
 }
 
 h4 {
