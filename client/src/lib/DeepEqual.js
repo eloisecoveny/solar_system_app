@@ -1,4 +1,4 @@
-function deepEqual(x, y){
+export function deepEqual(x, y){
   if (x === y) {
     return true;
   }
@@ -21,5 +21,3 @@ function deepEqual(x, y){
   else
     return false;
 }
-
-export function deepEqual(){}

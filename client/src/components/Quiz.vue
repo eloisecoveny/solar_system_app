@@ -38,7 +38,7 @@
 <script>
 import draggable from "vuedraggable";
 import { eventBus } from "../main.js";
-import DeepEqual from "../lib/DeepEqual.js"
+import { deepEqual } from "../lib/DeepEqual.js"
 
 export default {
   name: "quiz",
@@ -57,12 +57,12 @@ export default {
   },
   watch: {
     quizAnswers: function(newQuizAnswers, oldQuizAnswers){
-      if(this.deepEqual(newQuizAnswers, oldQuizAnswers)){
+      if(!deepEqual(newQuizAnswers, oldQuizAnswers)){
         this.targetAnswers = []
-        this.nextQuizBtn = false
-        this.rootAnswers = []
-        this.compAnswers()
       }
+      this.nextQuizBtn = false
+      this.rootAnswers = []
+      this.compAnswers()
       // if(newQuizAnswers !== oldQuizAnswers){
         // this.targetAnswers = []
       // }
