@@ -24,16 +24,12 @@
   </div>
 </template>
 
-
-
-
 <style lang="css" scoped>
 </style>
 
 
 <script>
 import {eventBus} from '../main.js'
-import {Howl, Howler} from 'howler';
 
 export default {
   name: "planet-detail",
@@ -48,14 +44,6 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
-    // audioPlay(){
-    //   const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3", "./src/assets/" + this.selectedPlanet.name + ".ogg"],
-    //   autoplay: true,
-    //   volume: 0.8});
-    //   myTrack.play();
-    // },
-
-
   }
 }
 </script>
@@ -205,7 +193,5 @@ button:hover {
   display: flex;
   align-items: center;
 }
-
-
 
 </style>
