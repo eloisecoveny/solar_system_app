@@ -24,12 +24,8 @@
   </div>
 </template>
 
-
-
-
 <style lang="css" scoped>
 </style>
-
 
 <script>
 import {eventBus} from '../main.js'
