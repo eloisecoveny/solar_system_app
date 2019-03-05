@@ -20,6 +20,7 @@
       <h4>{{selectedPlanet.name}}'s Frecuency</h4>
       <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
   </div>
+</div>
 </template>
 
 <style lang="css" scoped>
