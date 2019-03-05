@@ -8,7 +8,7 @@
           class="list-group-item"
           v-for="(answer, index) in rootAnswers"
           :key="`${answer.value}${answer.state}`">
-          <v-card-title>{{ answer.value }} : {{ answer.state }}</v-card-title>
+          <v-card-title>{{ answer.value }}</v-card-title>
         </v-card>
       </draggable>
     </div>
@@ -17,10 +17,10 @@
       <h3>Place Here</h3>
       <draggable class="list-group" :list="targetAnswers" group="answers" v-on:change="log">
         <v-card
-          class="list-group-item"
+          :class="{ correct: answer.state, incorrect: !answer.state }"
           v-for="(answer, index) in targetAnswers"
           :key="`${answer.value}${answer.state}`">
-          <v-card-title>{{ answer.value }} : {{ answer.state }}</v-card-title>
+          <v-card-title>{{ answer.value }}</v-card-title>
         </v-card>
       </draggable>
     </div>
@@ -114,11 +114,11 @@ export default {
   margin-top: 30px;
   padding: 20px;
   width: 25%;
-  radius: 10%;
 }
 
 div.v-card__title {
   margin: 5px;
+  radius: 20px;
 }
 
 img {
@@ -133,5 +133,27 @@ button {
   color: white;
 }
 
+.correct {
+  /* border: solid green; */
+  background-color: green;
+  /* border-radius: 5%; */
+}
+
+.incorrect {
+  background-color: red;
+}
+
+div.v-card {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+div.v-card:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
 
 </style>
