@@ -17,8 +17,9 @@
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight" > > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
     <div class="audio">
-      <h4>{{selectedPlanet.name}}'s Frecuency</h4>
-      <img v-on:click="audioPlay()"  class='button-play' src="../assets/play.png">
+      <h4>Frequency of {{selectedPlanet.name}}</h4>
+      <iframe  width="60" height="35" :src="selectedPlanet.frequency" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 </template>
@@ -28,7 +29,6 @@
 
 <script>
 import {eventBus} from '../main.js'
-import {Howl, Howler} from 'howler';
 
 export default {
   name: "planet-detail",
@@ -43,12 +43,15 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
+<<<<<<< HEAD
     audioPlay(){
       const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3", "./src/assets/" + this.selectedPlanet.name + ".ogg"],
       autoplay: true,
       volume: 0.8});
       myTrack.play();
     },
+=======
+>>>>>>> develop
   }
 }
 </script>
@@ -135,12 +138,14 @@ h3 {
 
 h4 {
   color: silver;
-  margin-left: 20px
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px
 }
 
 button {
   color:silver;
-  outline: none
+  outline: none;
 
 }
 
@@ -187,32 +192,27 @@ button:hover {
   width:80px;
   height:80px;
   cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: height 4s;
+  transition: height 4s;
 }
 
 #home:hover {
   transform: scale(1.4);
+  height: 200px;
 }
 
-.button-play {
-  height: 40px;
-  width: 40px;
-  margin-left: 20px;
-}
 
 .audio {
   position: absolute;
   z-index: 1;
   margin: 200px 90px;
-  width: 15%;
-  border: 1px solid white;
+  width: 20%;
+  border: none;
   display: flex;
   align-items: center;
-  border-radius: 8%;
 }
-
-.button-play:hover {
-  transform: scale(1.4);
-}
-
 
 </style>

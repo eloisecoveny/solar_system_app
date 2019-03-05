@@ -11,7 +11,14 @@ db.planets.insertMany([
       gravity: "28 times stronger than the force of gravity on the surface of the Earth",
       starType: "Yellow Dwarf",
       temperature: "10,000 degrees Fahrenheit/ 5538 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "No moons",
+      gravity: "28 times Earth's gravity",
+      starType: "Yellow Dwarf",
+      temperature: "10,000°F / 5538°C"
+    },
+    frequency:"https://www.youtube.com/embed/sGsyvN-egkA"
   },
   {
     name: "Mercury",
@@ -24,7 +31,17 @@ db.planets.insertMany([
       gravity: "87 times weaker than the force of gravity on the surface of the Earth",
       planetType: "Terrestrial",
       temperature: "Temperatures are extreme, both hot and cold 800 degrees Fahrenheit /  430 degrees Celsius, during the day. Because the planet has no atmosphere to retain that heat, nighttime temperatures on the surface can drop to  -290 degrees Fahrenheit /  -180 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "No moons",
+      lengthOfYears: "One year is 88 Earth days",
+      daysEarth: "One day is 59 Earth days",
+      gravity: "87 times weaker than Earth's gravity",
+      starType: "Terrestrial",
+      temperature: "800°F / 430°C to -290°F / -180°C"
+    },
+    frequency:"https://www.youtube.com/embed/R-B7nM7zHfM"
+
   },
   {
     name: "Venus",
@@ -37,7 +54,16 @@ db.planets.insertMany([
       gravity: "Almost the same force of gravity than the surface of the Earth",
       planetType: "Terrestrial",
       temperature: "1880 degrees Fahrenheit / 470 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "No moons",
+      lengthOfYears: "One year is 225 Earth days",
+      daysEarth: "One day is 243 Earth days",
+      gravity: "Almost the same as Earth",
+      planetType: "Terrestrial",
+      temperature: "1880°F / 470°C"
+    },
+    frequency:"https://www.youtube.com/embed/4SdfCTl0TQE"
   },
   {
     name: "Earth",
@@ -50,11 +76,19 @@ db.planets.insertMany([
       gravity: "9.8 m/s²",
       planetType: "Terrestrial",
       temperature: "Average temperatures rose 1.62 degrees Fahrenheit / 0.9 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "1 moon",
+      lengthOfYears: "One year is 365 Earth days",
+      daysEarth: "One day is 24 Earth hours",
+      gravity: "Gravity is 9.8 m/s²",
+      planetType: "Terrestrial",
+    },
+    frequency: "https://www.youtube.com/embed/BJ9pkEiI4OQ"
   },
   {
     name: "Mars",
-    image: 'https://hdqwalls.com/download/mars-4k-qhd-1920x1200.jpg',
+    image: 'https://ak2.picdn.net/shutterstock/videos/4810832/thumb/1.jpg',
     description: "The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere. This dynamic planet has seasons, polar ice caps, extinct volcanoes, canyons and weather. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago.",
     funFacts: {
       noMoons: 2,
@@ -63,7 +97,16 @@ db.planets.insertMany([
       gravity: "3 times weaker than the force of gravity on the surface of the Earth",
       planetType: "Terrestrial",
       temperature: "Can be as high as 70 degrees Fahrenheit / 20 degrees Celsius, or as low as about -225 degrees Fahrenheit / -153 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "2 moons",
+      lengthOfYears: "One year is 687 Earth days",
+      daysEarth: "One day is 25 Earth hours",
+      gravity: "Gravity is 3 times weaker than Earth",
+      planetType: "Terrestrial",
+      temperature: "70°F / 20°C to -225°F / -153°C"
+    },
+    frequency: "https://www.youtube.com/embed/gYyn5kJ7sPk"
   },
   {
     name: "Jupiter",
@@ -76,7 +119,16 @@ db.planets.insertMany([
       gravity: "3 times stronger than the force of gravity on the surface of the Earth",
       planetType: "Gas Giant",
       temperature: "The temperature ranges from about -190 degrees Fahrenheit / -128 degrees Celsius, for the visible surface of the atmosphere, to 9°F / -13°C at lower cloud levels. Certain regions reach as high as 40°F / 4°C at still lower cloud levels near the equator. Jupiter gives off four times as much heat as it gets from the sun."
-    }
+    },
+    quizFacts: {
+      noMoons: "79 moons",
+      lengthOfYears: "One year is 4333 Earth days",
+      daysEarth: "One day is 10 Earth hours",
+      gravity: "Gravity is 3 times stronger than Earth",
+      planetType: "Gas Giant",
+      temperature: "-190°F / -128°C to 9°F / -13°C"
+    },
+    frequency: "https://www.youtube.com/embed/dnG1sQNvBiA"
   },
   {
     name: "Saturn",
@@ -89,7 +141,16 @@ db.planets.insertMany([
       gravity: "Almost the same force of gravity than the surface of the Earth",
       planetType: "Gas Giant",
       temperature: "One Cool Planet. With an average temperature of minus 288 degrees Fahrenheit / -178 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "53 moons",
+      lengthOfYears: "One year is 10759 Earth days",
+      daysEarth: "One day is 11 Earth hours",
+      gravity: "Gravity is almost the same as Earth's",
+      planetType: "Gas Giant",
+      temperature: "-288°F / -178°C"
+    },
+    frequency: "https://www.youtube.com/embed/Zts0fSf08DM"
   },
   {
     name: "Uranus",
@@ -102,7 +163,16 @@ db.planets.insertMany([
       gravity: "Almost the same force of gravity than the surface of the Earth",
       planetType: "Ice Giant",
       temperature: "With a minimum temperature of -371 degrees Fahrenheit / -224 degrees Celsius, makes it even colder than Neptune in some places."
-    }
+    },
+    quizFacts: {
+      noMoons: "27 moons",
+      lengthOfYears: "One year is 30687 Earth days",
+      daysEarth: "One day is 17 Earth hours",
+      gravity: "Gravity is almost the same as Earth",
+      planetType: "Ice Giant",
+      temperature: "-371°F / -224°C"
+    },
+    frequency: "https://www.youtube.com/embed/5Mfp9f8a7QM"
   },
   {
     name: "Neptune",
@@ -115,7 +185,16 @@ db.planets.insertMany([
       gravity: "Almost the same force of gravity than the surface of the Earth",
       planetType: "Ice Giant",
       temperature: "The average temperature on Neptune is about -392 degrees Fahrenheit / -200 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "13 moons",
+      lengthOfYears: "One year is 60190 Earth days",
+      daysEarth: "One day is 16 Earth hours",
+      gravity: "Gravity is almost the same as Earth",
+      planetType: "Ice Giant",
+      temperature: "-392°F / -200°C"
+    },
+    frequency: "https://www.youtube.com/embed/3gxzPhp2bL0"
   },
   {
     name: "Pluto",
@@ -128,6 +207,15 @@ db.planets.insertMany([
       gravity: "Its gravity is only one-fifteenth that of Earth's, so you'd only weigh 10 lbs. (4.5 kilograms) on Pluto if you weighed 150 lbs. (68 kg) on Earth.",
       planetType: "Dwarf",
       temperature: "Can range from a low temperature of -400 degrees Fahrenheit / -240 and -360 degrees Fahrenheit / -218 degrees Celsius."
-    }
+    },
+    quizFacts: {
+      noMoons: "5 moons",
+      lengthOfYears: "One year is 90530 Earth days",
+      daysEarth: "One day is 6 Earth days",
+      gravity: "Gravity is one-fifteenth of Earth's",
+      planetType: "Dwarf",
+      temperature: "-400°F / -240°C to -360°F / -218°C"
+    },
+    frequency: "https://www.youtube.com/embed/x0hbFWeGMOg"
   }
 ])

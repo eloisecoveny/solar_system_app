@@ -1,13 +1,17 @@
 <template lang="html">
+
   <div class="animated fadeInDown faster" id="app">
-    <solar-system v-if="!selectedPlanet" :planets="planets"></solar-system>
-    <planet-detail v-if="selectedPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
+    <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
+    <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
+    <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
+    <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
   </div>
 </template>
 
 <script>
 import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
+import QuizManager from './components/QuizManager.vue'
 import { eventBus } from './main.js'
 
 
@@ -17,12 +21,16 @@ export default {
     return{
       planets: [],
       selectedPlanetIndex: null,
-      selectedPlanet: null
+      selectedPlanet: null,
+      shuffledPlanets: [],
+      quizPlanet: null,
+      quizPlanetIndex: null
     }
   },
   components: {
     SolarSystem,
-    PlanetDetail
+    PlanetDetail,
+    QuizManager,
   },
   mounted(){
     fetch('http://localhost:3000/api/planets/')
@@ -48,11 +56,40 @@ export default {
     eventBus.$on("go-home", () => {
       this.selectedPlanet = null
       this.selectedPlanetIndex =  null
+      this.quizPlanet = null
+      this.quizPlanetIndex = null
     })
+    eventBus.$on("next-quiz", () => {
+      console.log("Quiz index", this.quizPlanetIndex);
+      if(this.quizPlanetIndex < 9){
+        this.nextQuiz()
+      } else {
+        (this.quizCompleted())
+    }})
+  },
+  computed: {
   },
   methods: {
-    getPlanet(){
-
+    shufflePlanets(){
+      this.planets.forEach((planet) => {
+        this.shuffledPlanets.push(planet)
+      })
+      this.shuffledPlanets.sort((a, b) => {
+        return 0.5 - Math.random()
+      })
+      this.takeQuiz()
+    },
+    takeQuiz(){
+      this.quizPlanetIndex = 0
+      this.quizPlanet = this.shuffledPlanets[this.quizPlanetIndex]
+    },
+    nextQuiz(){
+      this.quizPlanetIndex += 1
+      this.quizPlanet = this.shuffledPlanets[this.quizPlanetIndex]
+      // eventBus.$emit("new-planet-quiz", (event))
+    },
+    quizCompleted(){
+      console.log("well done!");
     }
   }
 }
@@ -62,6 +99,10 @@ export default {
 
 #app {
   animation-duration: 5s;
+}
+
+button {
+  color: white;
 }
 
 </style>
