@@ -81,6 +81,7 @@ img {
   padding: none;
   color: silver;
   font-size: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .fun-facts {
@@ -115,6 +116,7 @@ h2 {
   margin-left: 35%;
   font-size: 40px;
   color: silver;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 h3 {
@@ -127,6 +129,11 @@ h4 {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 20px
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 }
 
 button {

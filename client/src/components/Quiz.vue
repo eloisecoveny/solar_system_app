@@ -128,7 +128,7 @@ export default {
 div.v-card__title {
   margin: 5px;
   radius: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 img {

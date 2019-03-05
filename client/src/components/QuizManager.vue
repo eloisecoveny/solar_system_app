@@ -8,7 +8,7 @@
         :quizPlanet="quizPlanet"
         :randomAnswers="randomAnswers" :planetAnswers="planetAnswers"></quiz>
     <div class="button">
-      <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome"> <<< i give up</button>
+      <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome"> <<< return to outer space</button>
     </div>
   </div>
 

@@ -6,13 +6,13 @@
       <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Space Training >>></button>
     </div>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|ZCOOL+QingKe+HuangYou" rel="stylesheet">
 
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
 
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
 
-    <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
+    <quiz-manager v-if="quizPlanet && !completed" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
 
     <completed-quiz v-if="completed"></completed-quiz>
 
@@ -74,7 +74,7 @@ export default {
       this.quizPlanetIndex = null
     })
     eventBus.$on("next-quiz", () => {
-      console.log("Quiz index", this.quizPlanetIndex);
+      // console.log("Quiz index", this.quizPlanetIndex);
       if(this.quizPlanetIndex < 9){
         this.nextQuiz()
       } else {
@@ -82,6 +82,7 @@ export default {
     }})
     eventBus.$on("return-home", () => {
       this.completed = false
+      this.quizPlanet = null
     })
   },
   computed: {
