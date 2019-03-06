@@ -15,7 +15,7 @@
     </div>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
-    <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
+    <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket2.png"/>
     <div class="audio">
       <h4>Frequency of {{selectedPlanet.name}}</h4>
       <iframe  width="60" height="35" :src="selectedPlanet.frequency" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -51,7 +51,6 @@ export default {
 <style lang="css" scoped>
 #planet-detail {
   background-color: black;
-
 }
 
 body {
@@ -59,6 +58,8 @@ body {
   flex-direction: wrap;
   justify-content: flex-end;
 }
+
+
 img {
   display: flex;
   margin-left: 300px;
@@ -82,6 +83,7 @@ img {
   color: silver;
   font-size: 20px;
 }
+
 
 .fun-facts {
   position: absolute;
@@ -133,10 +135,12 @@ button {
   color:silver;
   outline: none;
 
+
 }
 
 button:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
+
 
 }
 
@@ -151,6 +155,7 @@ button:hover {
   background-color: black;
   cursor: pointer;
   align-items:  center;
+
 }
 
 
@@ -180,14 +185,15 @@ button:hover {
   cursor: pointer;
   width: 100px;
   height: 100px;
-  background: red;
   -webkit-transition: height 4s;
   transition: height 4s;
+
 }
 
 #home:hover {
-  transform: scale(1.4);
-  height: 200px;
+  transform: scale(1.2);
+  height: 150px;
+
 }
 
 
@@ -200,5 +206,7 @@ button:hover {
   display: flex;
   align-items: center;
 }
+
+
 
 </style>
