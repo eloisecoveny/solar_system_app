@@ -15,11 +15,10 @@
     </div>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
     <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
-
-    <div id="image">
-      <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
+    <div class="home-btn">
+    <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket2.png"/>
+    <p v-on:click="goHome(selectedPlanet._id)" id="home-text"> <<< return to outer space</p>
     </div>
-
     <div class="audio">
       <h4>Listen to {{selectedPlanet.name}}</h4>
       <iframe  width="60" height="35" :src="selectedPlanet.frequency" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -52,10 +51,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-#planet-detail {
-  /* background-color: black; */
-
-}
 
 body {
   display: flex;
@@ -63,13 +58,6 @@ body {
   justify-content: flex-end;
 }
 
-#image {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
-  /* width: 100%; */
-}
 
 img {
   display: flex;
@@ -101,6 +89,7 @@ img {
   line-height: 30px;
 }
 
+
 .fun-facts {
   position: absolute;
   z-index: 1;
@@ -117,7 +106,6 @@ img {
   border-color: #ed802f;
   background-color: #e89f68;
   border-radius: 5%;
-  box-shadow: 20px 15px;
 }
 
 .fun-facts:hover {
@@ -159,17 +147,19 @@ h4 {
 
 p {
   font-family: 'Mukta', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 button {
   color:silver;
   outline: none;
 
+
 }
 
 button:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
+
 
 }
 
@@ -185,6 +175,7 @@ button:hover {
   /* background-color: black; */
   cursor: pointer;
   align-items:  center;
+
 }
 
 
@@ -203,27 +194,39 @@ button:hover {
 }
 
 #home {
-  position: absolute;
+  position: relative;
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 200px 600px;
-  width:80px;
-  height:80px;
   cursor: pointer;
   width: 100px;
   height: 100px;
-  background: red;
   -webkit-transition: height 4s;
   transition: height 4s;
+  top: 300px;
+  left: 20px;
 }
 
 #home:hover {
-  transform: scale(1.4);
-  height: 200px;
+  transform: scale(1.2);
+  height: 120px;
 }
 
+#home-text {
+  color: white;
+  margin-left: 40px;
+  margin-top: 250px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 30px;
+  color: rgb(142, 31, 49);
+  cursor: pointer;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 30px
+
+}
 
 .audio {
   position: absolute;
@@ -233,6 +236,9 @@ button:hover {
   border: none;
   display: flex;
   align-items: center;
+  top: 500px;
 }
+
+
 
 </style>
