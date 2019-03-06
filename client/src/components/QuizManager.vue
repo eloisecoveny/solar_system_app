@@ -1,14 +1,14 @@
 <template lang="html">
   <div id="quiz-index">
-    <h1>You're ready to take the test on:</h1>
+    <!-- <h1>You're ready to take the test on:</h1> -->
     {{ generateAnswers }}
-    <p>{{ quizPlanet.name }}</p>
+    <!-- <p>{{ quizPlanet.name }}</p> -->
       <quiz
         :quizAnswers="quizAnswers"
         :quizPlanet="quizPlanet"
         :randomAnswers="randomAnswers" :planetAnswers="planetAnswers"></quiz>
     <div class="button">
-      <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome">Home</button>
+      <button v-on:click="goHome(quizPlanet._id)" type="button" name="buttonHome"> <<< return to outer space</button>
     </div>
   </div>
 
@@ -111,13 +111,18 @@ export default {
 
 .button {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 button {
   color: white;
-  margin-right: 50px;
-  margin-bottom: 50px;
+  margin-left: 30px;
+  margin-bottom: 80px;
+  margin-top: 10px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 30px;
+  color: rgb(142, 31, 49);
 }
 
 </style>
