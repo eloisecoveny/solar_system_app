@@ -117,7 +117,6 @@ img {
   border-color: #ed802f;
   background-color: #e89f68;
   border-radius: 5%;
-  box-shadow: 20px 15px;
 }
 
 .fun-facts:hover {
@@ -159,7 +158,7 @@ h4 {
 
 p {
   font-family: 'Mukta', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 button {
