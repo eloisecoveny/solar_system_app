@@ -126,6 +126,7 @@ h1:hover {
   transition: transform .2s;
   z-index: 9;
   transform: rotate3d(0, 1, 0, -53deg);
+  cursor: pointer;
 }
 
 #sun:hover {
@@ -155,6 +156,7 @@ h1:hover {
   border-radius: 100%;
   background: radial-gradient(circle at 50% 50%, #ffe526, #e29b28);
   transition: transform .2s;
+  cursor: pointer;
 }
 
 #mercury:hover {
@@ -183,6 +185,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #ffa11e, #f76516);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #venus:hover {
@@ -211,6 +214,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #69b1f4, #00ad62);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #earth-moon {
@@ -262,6 +266,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #dd0202, #ff9035);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #mars:hover {
@@ -290,6 +295,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #876e00, #bf7900);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #jupiter:hover {
@@ -318,6 +324,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 5px 10px, #baa071, #ffdf54);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #saturn-ring {
@@ -358,6 +365,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #7050fc, #48cec7);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #uranus:hover {
@@ -386,6 +394,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #df65f7, #8c51c6);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #neptune:hover {
@@ -414,6 +423,7 @@ h1:hover {
     border-radius: 100%;
     background: radial-gradient(circle at 50% 50%, #e5e1da, #d0b6f9);
     transition: transform .2s;
+    cursor: pointer;
 }
 
 #pluto:hover {
