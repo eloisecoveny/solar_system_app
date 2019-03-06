@@ -12,7 +12,9 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "vue": "^2.5.11",
-    "vuetify": "^1.5.4"
+    "vuetify": "^1.5.4",
+    "simple-named-modules-plugin-webpack": "^1.0.0",
+    "vuedraggable": "^2.19.0"
   },
   "browserslist": [
     "> 1%",

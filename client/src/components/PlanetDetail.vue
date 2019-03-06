@@ -43,15 +43,6 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
-<<<<<<< HEAD
-    audioPlay(){
-      const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3", "./src/assets/" + this.selectedPlanet.name + ".ogg"],
-      autoplay: true,
-      volume: 0.8});
-      myTrack.play();
-    },
-=======
->>>>>>> develop
   }
 }
 </script>
