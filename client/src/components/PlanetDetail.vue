@@ -1,9 +1,9 @@
 <template lang="html">
-  <div id="planet-detail">
-    <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
-    <h2>{{selectedPlanet.name}}</h2>
-    <p id="description">{{selectedPlanet.description}}</p>
-    <div class="fun-facts">
+  <div id="planet-detail" class="animated zoomIn faster">
+    <img class="animated fadeInDownBig 1s" :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
+    <h2 class="animated fadeInLeft 1s">{{selectedPlanet.name}}</h2>
+    <p class="animated fadeInUpBig 1s" id="description">{{selectedPlanet.description}}</p>
+    <div class="fun-facts animated fadeInRight 1s">
       <h3>Fun Facts</h3>
       <p class="pfun-facts"><b>Number of Moons:</b> {{selectedPlanet.funFacts.noMoons}}</p>
       <p class="pfun-facts"><b>Gravity:</b> {{selectedPlanet.funFacts.gravity}}</p>
@@ -23,14 +23,13 @@
     <div class="audio">
       <h4>Listen to {{selectedPlanet.name}}</h4>
       <iframe  width="60" height="35" :src="selectedPlanet.frequency" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
     </div>
   </div>
+</div>
 </template>
 
 <style lang="css" scoped>
 </style>
-
 
 <script>
 import {eventBus} from '../main.js'
@@ -127,7 +126,10 @@ img {
 
 .pfun-facts {
   background-color: #e89f68;
+}
 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
@@ -139,6 +141,7 @@ h2 {
 }
 
 h3 {
+  font-size: 20px;
   margin: 2px;
   background-color: #e89f68;
   font-family: 'Mukta', sans-serif;
