@@ -1,10 +1,21 @@
 <template lang="html">
 
   <div class="animated fadeInDown faster" id="app">
+
+    <div id="button">
+      <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Space Training >>></button>
+    </div>
+
+    <link href="https://fonts.googleapis.com/css?family=Mukta|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
+
     <planet-detail v-if="selectedPlanet && !quizPlanet" :selectedPlanet="selectedPlanet"></planet-detail>
-    <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Take the Quiz</button>
-    <quiz-manager v-if="quizPlanet" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
+
+    <quiz-manager v-if="quizPlanet && !completed" :shuffledPlanets="shuffledPlanets" :quizPlanet="quizPlanet" :quizPlanetIndex="quizPlanetIndex"></quiz-manager>
+
+    <completed-quiz v-if="completed"></completed-quiz>
+
   </div>
 </template>
 
@@ -12,6 +23,7 @@
 import SolarSystem from './components/SolarSystem.vue'
 import PlanetDetail from './components/PlanetDetail.vue'
 import QuizManager from './components/QuizManager.vue'
+import CompletedQuiz from './components/CompletedQuiz.vue'
 import { eventBus } from './main.js'
 
 
@@ -24,13 +36,15 @@ export default {
       selectedPlanet: null,
       shuffledPlanets: [],
       quizPlanet: null,
-      quizPlanetIndex: null
+      quizPlanetIndex: null,
+      completed: false
     }
   },
   components: {
     SolarSystem,
     PlanetDetail,
     QuizManager,
+    CompletedQuiz
   },
   mounted(){
     fetch('http://localhost:3000/api/planets/')
@@ -60,12 +74,16 @@ export default {
       this.quizPlanetIndex = null
     })
     eventBus.$on("next-quiz", () => {
-      console.log("Quiz index", this.quizPlanetIndex);
+      // console.log("Quiz index", this.quizPlanetIndex);
       if(this.quizPlanetIndex < 9){
         this.nextQuiz()
       } else {
         (this.quizCompleted())
     }})
+    eventBus.$on("return-home", () => {
+      this.completed = false
+      this.quizPlanet = null
+    })
   },
   computed: {
   },
@@ -89,7 +107,7 @@ export default {
       // eventBus.$emit("new-planet-quiz", (event))
     },
     quizCompleted(){
-      console.log("well done!");
+      this.completed = true
     }
   }
 }
@@ -101,8 +119,18 @@ export default {
   animation-duration: 5s;
 }
 
+#button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
   color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  color: rgb(98, 135, 193);
 }
 
 </style>

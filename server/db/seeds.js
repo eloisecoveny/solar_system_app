@@ -146,7 +146,7 @@ db.planets.insertMany([
       noMoons: "53 moons",
       lengthOfYears: "One year is 10759 Earth days",
       daysEarth: "One day is 11 Earth hours",
-      gravity: "Gravity is almost the same as Earth's",
+      gravity: "Gravity is almost the same as Earth",
       planetType: "Gas Giant",
       temperature: "-288°F / -178°C"
     },

@@ -1,6 +1,11 @@
 <template lang="html">
-  <div id="planetIndex">
-    <h1>Solar System</h1>
+<div id="cosmos-wrapper">
+
+  <div id="title">
+    <h1>Explore our Solar System</h1>
+  </div>
+
+    <div id="planetIndex">
       <div id="sun-rotate" v-on:click="handleClick(0)" >
         <div id="sun">
         </div>
@@ -50,6 +55,7 @@
       <div id="cosmos">
       </div>
 
+    </div>
   </div>
 </template>
 
@@ -74,20 +80,22 @@ export default {
 
 <style lang="css" scoped>
 
-h1 {
+#title {
+  width: 50px;
   color: white;
   transition: transform .2s;
-  margin-top: -220px;
-  margin-left: 80px;
+  margin-top: -140px;
+  margin-left: 50px;
   float: left;
   transform: rotate3d(0, 0, 0, -53deg);
-  font-size: 45px;
-  font-family: 'Abel', sans-serif;
+  font-size: 30px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  /* transform: rotate(-90deg); */
 }
-
+/*
 h1:hover {
   transform: scale(1.4);
-}
+} */
 
 #planetIndex {
   align-items: center;
@@ -417,6 +425,5 @@ h1:hover {
     -o-transform: rotate(-360deg);
   }
 }
-
 
 </style>
