@@ -6,7 +6,7 @@
       <button v-if="!quizPlanet" v-on:click="shufflePlanets()" type="button" name="take-quiz">Space Training >>></button>
     </div>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mukta|ZCOOL+QingKe+HuangYou" rel="stylesheet">
 
     <solar-system v-if="!selectedPlanet && !quizPlanet" :planets="planets"></solar-system>
 

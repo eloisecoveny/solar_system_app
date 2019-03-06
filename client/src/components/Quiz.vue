@@ -12,6 +12,7 @@
       <h3>Drop your answers here</h3>
       <draggable class="list-group" :list="targetAnswers" group="answers" v-on:change="log">
         <v-card
+          id="list-group-item"
           :class="{ correct: answer.state, incorrect: !answer.state }"
           v-for="(answer, index) in targetAnswers"
           :key="`${answer.value}${answer.state}`">
@@ -24,7 +25,7 @@
       <h3>Guess which four are correct</h3>
       <draggable class="list-group" :list="rootAnswers" group="answers" v-on:change="log">
         <v-card
-          class="list-group-item"
+          id="list-group-item"
           v-for="(answer, index) in rootAnswers"
           :key="`${answer.value}${answer.state}`">
           <v-card-title>{{ answer.value }}</v-card-title>
@@ -125,10 +126,34 @@ export default {
   width: 25%;
 }
 
+#list-group-item.v-card {
+  border-radius: 10px;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+#list-group-item.v-card:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  background-color: orange;
+}
+
+#flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 27px;
+  margin-left: 30px;
+}
+
 div.v-card__title {
   margin: 5px;
-  radius: 20px;
-  font-family: 'Lato', sans-serif;
+  padding: 15px;
+  /* border-radius: 50px; */
+  font-family: 'Mukta', sans-serif;
 }
 
 img {
@@ -155,39 +180,15 @@ button {
 }
 
 .correct {
-  /* border: solid green; */
   background-color: rgb(47, 124, 59);
-  /* border-radius: 5%; */
 }
 
 .incorrect {
   background-color: rgb(142, 31, 49);
 }
 
-div.v-card {
-    cursor: move;
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-}
-
-div.v-card:active {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
-    background-color: orange;
-}
-
 .list-group {
   margin-top: 20px;
-}
-
-#flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 27px;
-  margin-left: 30px;
 }
 
 </style>
