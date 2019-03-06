@@ -1,9 +1,9 @@
 <template lang="html">
-  <div id="planet-detail">
-    <img :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
-    <h2>{{selectedPlanet.name}}</h2>
-    <p id="description">{{selectedPlanet.description}}</p>
-    <div class="fun-facts">
+  <div id="planet-detail" class="animated zoomIn faster">
+    <img class="animated fadeInDownBig 1s" :alt="selectedPlanet.name" :src="selectedPlanet.image"/>
+    <h2 class="animated fadeInLeft 1s">{{selectedPlanet.name}}</h2>
+    <p class="animated fadeInUpBig 1s" id="description">{{selectedPlanet.description}}</p>
+    <div class="fun-facts animated fadeInRight 1s">
       <h3>Fun Facts</h3>
       <p class="pfun-facts">Number of Moons: {{selectedPlanet.funFacts.noMoons}}</p>
       <p class="pfun-facts">Gravity: {{selectedPlanet.funFacts.gravity}}</p>
@@ -14,19 +14,18 @@
       <p class="pfun-facts">Temperature: {{selectedPlanet.funFacts.temperature}}</p>
     </div>
     <button id="arrow-left" v-on:click="handleToggleLeft(selectedPlanet._id)" type="button" name="buttonLeft" > < </button>
-    <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight"> > </button>
+    <button id="arrow-right" v-on:click="handleToggleRight(selectedPlanet._id)" type="button" name="buttonRight" > > </button>
     <img id="home" v-on:click="goHome(selectedPlanet._id)" src= "../assets/rocket.jpg"/>
     <div class="audio">
       <h4>Frequency of {{selectedPlanet.name}}</h4>
       <iframe  width="60" height="35" :src="selectedPlanet.frequency" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
     </div>
   </div>
+</div>
 </template>
 
 <style lang="css" scoped>
 </style>
-
 
 <script>
 import {eventBus} from '../main.js'
@@ -44,6 +43,15 @@ export default {
     goHome(id){
       eventBus.$emit("go-home", id)
     },
+<<<<<<< HEAD
+    audioPlay(){
+      const myTrack = new Howl({src: ["./src/assets/" + this.selectedPlanet.name + ".mp3", "./src/assets/" + this.selectedPlanet.name + ".ogg"],
+      autoplay: true,
+      volume: 0.8});
+      myTrack.play();
+    },
+=======
+>>>>>>> develop
   }
 }
 </script>
@@ -107,19 +115,25 @@ img {
 
 .pfun-facts {
   background-color: #e89f68;
+}
 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
   display: flex;
   margin-left: 35%;
-  font-size: 40px;
+  font-size: 50px;
   color: silver;
+  font-family: 'Abel', sans-serif;
 }
 
 h3 {
+  font-size: 20px;
   margin: 2px;
-  background-color: #e89f68
+  background-color: #e89f68;
+  font-family: 'Abel', sans-serif;
 }
 
 h4 {

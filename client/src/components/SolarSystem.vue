@@ -82,6 +82,7 @@ h1 {
   float: left;
   transform: rotate3d(0, 0, 0, -53deg);
   font-size: 45px;
+  font-family: 'Abel', sans-serif;
 }
 
 h1:hover {
@@ -248,7 +249,7 @@ h1:hover {
     height: 23px;
     width: 23px;
     border-radius: 100%;
-    background: radial-gradient(circle at 50% 50%, #dda600, #bf7900);
+    background: radial-gradient(circle at 50% 50%, #dd0202, #ff9035);
     transition: transform .2s;
 }
 
