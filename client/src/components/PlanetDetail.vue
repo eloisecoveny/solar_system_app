@@ -105,7 +105,7 @@ img {
   border-width: 6px;
   border-color: #ed802f;
   background-color: #e89f68;
-  border-radius: 5%;
+  border-radius: 5%; 
 }
 
 .fun-facts:hover {
