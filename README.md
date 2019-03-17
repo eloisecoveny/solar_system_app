@@ -1,15 +1,23 @@
-(cd into server)
-npm i
+# Explore our Solar System
+**Team Project: 3 contributors**
 
-(cd into client)
-npm i
+## The Project
+This was a JavaScript full-stack Vue application using MongoDB and Express.
 
-(anywhere)
-mongod
+[Project Brief](./education_app.md)
 
-(cd into server)
-npm run seeds
-npm run server:dev
+## Screen Grabs
 
-(cd into client)
-npm run dev
+![Homepage](./ScreenGrabs/Homepage.png)
+
+![Planet_Detail](./ScreenGrabs/Planet_Detail.png)
+
+![Planet_Quiz](./ScreenGrabs/Planet_Quiz.png)
+
+![Completed](./ScreenGrabs/Completed.png)
+
+## Installation instructions
+
+[Client](./client/README.md)
+
+[Server](./server/README.md)
